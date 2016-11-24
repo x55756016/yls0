@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="HRDatabase">
+    <EntitySetMapping Name="HR_ICD10CATEGORY">
+      <EntityTypeMapping TypeName="Model1.HR_ICD10CATEGORY">
+        <MappingFragment StoreEntitySet="HR_ICD10CATEGORY">
+          <ScalarProperty Name="DISEASENAME" ColumnName="DISEASENAME" />
+          <ScalarProperty Name="PARENTID" ColumnName="PARENTID" />
+          <ScalarProperty Name="ENDCODE" ColumnName="ENDCODE" />
+          <ScalarProperty Name="STARTCODE" ColumnName="STARTCODE" />
+          <ScalarProperty Name="CATEGORYCODE" ColumnName="CATEGORYCODE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_ICD10">
+      <EntityTypeMapping TypeName="Model1.HR_ICD10">
+        <MappingFragment StoreEntitySet="HR_ICD10">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CategoryCode" ColumnName="CategoryCode" />
+          <ScalarProperty Name="PinYinCode" ColumnName="PinYinCode" />
+          <ScalarProperty Name="DiseaseEnName" ColumnName="DiseaseEnName" />
+          <ScalarProperty Name="DiseaseName" ColumnName="DiseaseName" />
+          <ScalarProperty Name="DiseaseCode" ColumnName="DiseaseCode" />
+          <ScalarProperty Name="DiseaseNo" ColumnName="DiseaseNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_FAMILYINFO">
+      <EntityTypeMapping TypeName="Model1.HR_FAMILYINFO">
+        <MappingFragment StoreEntitySet="HR_FAMILYINFO">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="POSTCODE" ColumnName="POSTCODE" />
+          <ScalarProperty Name="ADDRESSNAME" ColumnName="ADDRESSNAME" />
+          <ScalarProperty Name="ADDRESSCODE" ColumnName="ADDRESSCODE" />
+          <ScalarProperty Name="MASTERIDNO" ColumnName="MASTERIDNO" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="MASTER" ColumnName="MASTER" />
+          <ScalarProperty Name="FAMILYID" ColumnName="FAMILYID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_FAMILYMEMBER">
+      <EntityTypeMapping TypeName="Model1.HR_FAMILYMEMBER">
+        <MappingFragment StoreEntitySet="HR_FAMILYMEMBER">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="RELATIONSHIP" ColumnName="RELATIONSHIP" />
+          <ScalarProperty Name="PERSONID" ColumnName="PERSONID" />
+          <ScalarProperty Name="FAMILYID" ColumnName="FAMILYID" />
+          <ScalarProperty Name="FMEMBERID" ColumnName="FMEMBERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_REF_CODEFILE">
+      <EntityTypeMapping TypeName="Model1.HR_REF_CODEFILE">
+        <MappingFragment StoreEntitySet="HR_REF_CODEFILE">
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="CODEVALUE" ColumnName="CODEVALUE" />
+          <ScalarProperty Name="CODENAME" ColumnName="CODENAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CODENO" ColumnName="CODENO" />
+          <ScalarProperty Name="CODEID" ColumnName="CODEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_PERSONINFO">
+      <EntityTypeMapping TypeName="Model1.HR_PERSONINFO">
+        <MappingFragment StoreEntitySet="HR_PERSONINFO">
+          <ScalarProperty Name="RECORDNO" ColumnName="RECORDNO" />
+          <ScalarProperty Name="BLOODTYPE" ColumnName="BLOODTYPE" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="ARCHIVEDATE" ColumnName="ARCHIVEDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="RESPONSIBLEDOCTORPHONE" ColumnName="RESPONSIBLEDOCTORPHONE" />
+          <ScalarProperty Name="RESPONSIBLEDOCTOR" ColumnName="RESPONSIBLEDOCTOR" />
+          <ScalarProperty Name="RESPONSIBLEORGANIZATIONID" ColumnName="RESPONSIBLEORGANIZATIONID" />
+          <ScalarProperty Name="RESPONSIBLEORGANIZATION" ColumnName="RESPONSIBLEORGANIZATION" />
+          <ScalarProperty Name="COMMUNITYCONTACTPHONE" ColumnName="COMMUNITYCONTACTPHONE" />
+          <ScalarProperty Name="COMMUNITYCONTACT" ColumnName="COMMUNITYCONTACT" />
+          <ScalarProperty Name="COMMUNITY" ColumnName="COMMUNITY" />
+          <ScalarProperty Name="DISABILITYSTATUS" ColumnName="DISABILITYSTATUS" />
+          <ScalarProperty Name="RISKFACTORS" ColumnName="RISKFACTORS" />
+          <ScalarProperty Name="ALLERGYHISTORY" ColumnName="ALLERGYHISTORY" />
+          <ScalarProperty Name="RHTYPE" ColumnName="RHTYPE" />
+          <ScalarProperty Name="ABOTYPE" ColumnName="ABOTYPE" />
+          <ScalarProperty Name="PAYMETHOD" ColumnName="PAYMETHOD" />
+          <ScalarProperty Name="INSURANCETYPENAME" ColumnName="INSURANCETYPENAME" />
+          <ScalarProperty Name="INSURANCETYPE" ColumnName="INSURANCETYPE" />
+          <ScalarProperty Name="EDUCATIONLEVEL" ColumnName="EDUCATIONLEVEL" />
+          <ScalarProperty Name="OCCUPATIONCLASS" ColumnName="OCCUPATIONCLASS" />
+          <ScalarProperty Name="HIREDATE" ColumnName="HIREDATE" />
+          <ScalarProperty Name="COMPANY" ColumnName="COMPANY" />
+          <ScalarProperty Name="CURRENTPOSTCODE" ColumnName="CURRENTPOSTCODE" />
+          <ScalarProperty Name="CURRENTADDRESSNAME" ColumnName="CURRENTADDRESSNAME" />
+          <ScalarProperty Name="CURRENTADDRESSCODE" ColumnName="CURRENTADDRESSCODE" />
+          <ScalarProperty Name="CENSUSPOSTCODE" ColumnName="CENSUSPOSTCODE" />
+          <ScalarProperty Name="CENSUSADDRESSNAME" ColumnName="CENSUSADDRESSNAME" />
+          <ScalarProperty Name="CENSUSADDRESSCODE" ColumnName="CENSUSADDRESSCODE" />
+          <ScalarProperty Name="CENSUSREGISTERFLAG" ColumnName="CENSUSREGISTERFLAG" />
+          <ScalarProperty Name="EMAILADDRESS" ColumnName="EMAILADDRESS" />
+          <ScalarProperty Name="CONTACTPHONE" ColumnName="CONTACTPHONE" />
+          <ScalarProperty Name="CONTACTNAME" ColumnName="CONTACTNAME" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="IDNUMBER" ColumnName="IDNUMBER" />
+          <ScalarProperty Name="IDTYPE" ColumnName="IDTYPE" />
+          <ScalarProperty Name="MARRIAGESTATUS" ColumnName="MARRIAGESTATUS" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+          <ScalarProperty Name="BIRTHDATE" ColumnName="BIRTHDATE" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="PERSONNO" ColumnName="PERSONNO" />
+          <ScalarProperty Name="PERSONID" ColumnName="PERSONID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

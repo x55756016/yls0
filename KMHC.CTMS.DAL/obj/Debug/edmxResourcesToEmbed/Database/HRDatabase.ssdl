@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="HR_FAMILYINFO">
+    <Key>
+      <PropertyRef Name="FAMILYID" />
+    </Key>
+    <Property Name="FAMILYID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="MASTER" Type="varchar2" MaxLength="100" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="500" />
+    <Property Name="MASTERIDNO" Type="varchar2" MaxLength="18" Nullable="false" />
+    <Property Name="ADDRESSCODE" Type="varchar2" MaxLength="100" />
+    <Property Name="ADDRESSNAME" Type="varchar2" MaxLength="500" />
+    <Property Name="POSTCODE" Type="varchar2" MaxLength="6" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_FAMILYMEMBER">
+    <Key>
+      <PropertyRef Name="FMEMBERID" />
+    </Key>
+    <Property Name="FMEMBERID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="FAMILYID" Type="number" Precision="9" Scale="0" />
+    <Property Name="PERSONID" Type="number" Precision="9" Scale="0" />
+    <Property Name="RELATIONSHIP" Type="varchar2" MaxLength="10" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“HEALTHRECORD.HR_ICD10”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="HR_ICD10">
+    <Key>
+      <PropertyRef Name="DiseaseNo" />
+      <PropertyRef Name="DiseaseCode" />
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="DiseaseNo" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DiseaseCode" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="DiseaseName" Type="nvarchar2" MaxLength="100" />
+    <Property Name="DiseaseEnName" Type="varchar2" MaxLength="100" />
+    <Property Name="PinYinCode" Type="varchar2" MaxLength="20" />
+    <Property Name="CategoryCode" Type="varchar2" MaxLength="10" />
+    <Property Name="Remark" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CategoryID" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HR_ICD10CATEGORY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="CATEGORYCODE" Type="nchar" MaxLength="7" />
+    <Property Name="STARTCODE" Type="nchar" MaxLength="3" />
+    <Property Name="ENDCODE" Type="nchar" MaxLength="3" />
+    <Property Name="PARENTID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="DISEASENAME" Type="nvarchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_PERSONINFO">
+    <Key>
+      <PropertyRef Name="PERSONID" />
+    </Key>
+    <Property Name="PERSONID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="PERSONNO" Type="varchar2" MaxLength="18" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="GENDER" Type="varchar2" MaxLength="3" Nullable="false" />
+    <Property Name="BIRTHDATE" Type="varchar2" MaxLength="8" />
+    <Property Name="COUNTRY" Type="varchar2" MaxLength="3" />
+    <Property Name="NATIONALITY" Type="varchar2" MaxLength="3" />
+    <Property Name="MARRIAGESTATUS" Type="varchar2" MaxLength="3" />
+    <Property Name="IDTYPE" Type="varchar2" MaxLength="3" Nullable="false" />
+    <Property Name="IDNUMBER" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="PHONE" Type="varchar2" MaxLength="20" />
+    <Property Name="CONTACTNAME" Type="varchar2" MaxLength="50" />
+    <Property Name="CONTACTPHONE" Type="varchar2" MaxLength="20" />
+    <Property Name="EMAILADDRESS" Type="varchar2" MaxLength="70" />
+    <Property Name="CENSUSREGISTERFLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="CENSUSADDRESSCODE" Type="varchar2" MaxLength="100" />
+    <Property Name="CENSUSADDRESSNAME" Type="varchar2" MaxLength="500" />
+    <Property Name="CENSUSPOSTCODE" Type="varchar2" MaxLength="6" />
+    <Property Name="CURRENTADDRESSCODE" Type="varchar2" MaxLength="100" />
+    <Property Name="CURRENTADDRESSNAME" Type="varchar2" MaxLength="500" />
+    <Property Name="CURRENTPOSTCODE" Type="varchar2" MaxLength="6" />
+    <Property Name="COMPANY" Type="varchar2" MaxLength="70" />
+    <Property Name="HIREDATE" Type="varchar2" MaxLength="8" />
+    <Property Name="OCCUPATIONCLASS" Type="varchar2" MaxLength="3" />
+    <Property Name="EDUCATIONLEVEL" Type="varchar2" MaxLength="3" />
+    <Property Name="INSURANCETYPE" Type="varchar2" MaxLength="3" />
+    <Property Name="INSURANCETYPENAME" Type="varchar2" MaxLength="3" />
+    <Property Name="PAYMETHOD" Type="varchar2" MaxLength="3" />
+    <Property Name="ABOTYPE" Type="varchar2" MaxLength="3" />
+    <Property Name="RHTYPE" Type="varchar2" MaxLength="3" />
+    <Property Name="ALLERGYHISTORY" Type="varchar2" MaxLength="2000" />
+    <Property Name="RISKFACTORS" Type="varchar2" MaxLength="2000" />
+    <Property Name="DISABILITYSTATUS" Type="varchar2" MaxLength="2000" />
+    <Property Name="COMMUNITY" Type="varchar2" MaxLength="70" />
+    <Property Name="COMMUNITYCONTACT" Type="varchar2" MaxLength="50" />
+    <Property Name="COMMUNITYCONTACTPHONE" Type="varchar2" MaxLength="20" />
+    <Property Name="RESPONSIBLEORGANIZATION" Type="varchar2" MaxLength="70" />
+    <Property Name="RESPONSIBLEORGANIZATIONID" Type="varchar2" MaxLength="10" />
+    <Property Name="RESPONSIBLEDOCTOR" Type="varchar2" MaxLength="50" />
+    <Property Name="RESPONSIBLEDOCTORPHONE" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" Nullable="false" />
+    <Property Name="ARCHIVEDATE" Type="date" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="100" />
+    <Property Name="BLOODTYPE" Type="varchar2" MaxLength="100" />
+    <Property Name="RECORDNO" Type="varchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_REF_CODEFILE">
+    <Key>
+      <PropertyRef Name="CODEID" />
+    </Key>
+    <Property Name="CODEID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="CODENO" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+    <Property Name="CODENAME" Type="varchar2" MaxLength="100" />
+    <Property Name="CODEVALUE" Type="varchar2" MaxLength="4000" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="500" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="HR_FAMILYINFO" EntityType="Self.HR_FAMILYINFO" Schema="HEALTHRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_FAMILYMEMBER" EntityType="Self.HR_FAMILYMEMBER" Schema="HEALTHRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_ICD10CATEGORY" EntityType="Self.HR_ICD10CATEGORY" Schema="HEALTHRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_PERSONINFO" EntityType="Self.HR_PERSONINFO" Schema="HEALTHRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_REF_CODEFILE" EntityType="Self.HR_REF_CODEFILE" Schema="HEALTHRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_ICD10" EntityType="Self.HR_ICD10" store:Type="Tables" store:Schema="HEALTHRECORD">
+      <DefiningQuery>SELECT 
+"HR_ICD10"."DiseaseNo" AS "DiseaseNo", 
+"HR_ICD10"."DiseaseCode" AS "DiseaseCode", 
+"HR_ICD10"."DiseaseName" AS "DiseaseName", 
+"HR_ICD10"."DiseaseEnName" AS "DiseaseEnName", 
+"HR_ICD10"."PinYinCode" AS "PinYinCode", 
+"HR_ICD10"."CategoryCode" AS "CategoryCode", 
+"HR_ICD10"."Remark" AS "Remark", 
+"HR_ICD10"."CategoryID" AS "CategoryID"
+FROM "HEALTHRECORD"."HR_ICD10" "HR_ICD10"</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

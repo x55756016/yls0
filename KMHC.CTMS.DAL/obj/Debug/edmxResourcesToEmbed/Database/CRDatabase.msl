@@ -1,0 +1,1117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="CRDatabase">
+    <EntitySetMapping Name="CR_DRUGUSE">
+      <EntityTypeMapping TypeName="Model.CR_DRUGUSE">
+        <MappingFragment StoreEntitySet="CR_DRUGUSE">
+          <ScalarProperty Name="OWNERID" ColumnName="OWNERID" />
+          <ScalarProperty Name="ISDELETED" ColumnName="ISDELETED" />
+          <ScalarProperty Name="EDITDATETIME" ColumnName="EDITDATETIME" />
+          <ScalarProperty Name="EDITUSERID" ColumnName="EDITUSERID" />
+          <ScalarProperty Name="CREATEDATETIME" ColumnName="CREATEDATETIME" />
+          <ScalarProperty Name="CREATEUSERID" ColumnName="CREATEUSERID" />
+          <ScalarProperty Name="ISNEWDRUG" ColumnName="ISNEWDRUG" />
+          <ScalarProperty Name="USEDAY" ColumnName="USEDAY" />
+          <ScalarProperty Name="UNITS" ColumnName="UNITS" />
+          <ScalarProperty Name="DOSE" ColumnName="DOSE" />
+          <ScalarProperty Name="TIMESADAY" ColumnName="TIMESADAY" />
+          <ScalarProperty Name="ENDTIME" ColumnName="ENDTIME" />
+          <ScalarProperty Name="STARTTIME" ColumnName="STARTTIME" />
+          <ScalarProperty Name="TREATMENTDISEASES" ColumnName="TREATMENTDISEASES" />
+          <ScalarProperty Name="DRUGID" ColumnName="DRUGID" />
+          <ScalarProperty Name="DRUGNAME" ColumnName="DRUGNAME" />
+          <ScalarProperty Name="DRUGTYPE" ColumnName="DRUGTYPE" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="DISEASEID" ColumnName="DISEASEID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CR_HABITS">
+      <EntityTypeMapping TypeName="Model.CR_HABITS">
+        <MappingFragment StoreEntitySet="CR_HABITS">
+          <ScalarProperty Name="HABITSCODE" ColumnName="HABITSCODE" />
+          <ScalarProperty Name="DISEASEID" ColumnName="DISEASEID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_CNDRUG">
+      <EntityTypeMapping TypeName="Model.DUG_CNDRUG">
+        <MappingFragment StoreEntitySet="DUG_CNDRUG">
+          <ScalarProperty Name="ISDELETED" ColumnName="ISDELETED" />
+          <ScalarProperty Name="OWNERNAME" ColumnName="OWNERNAME" />
+          <ScalarProperty Name="OWNERID" ColumnName="OWNERID" />
+          <ScalarProperty Name="EDITDATETIME" ColumnName="EDITDATETIME" />
+          <ScalarProperty Name="EDITUSERNAME" ColumnName="EDITUSERNAME" />
+          <ScalarProperty Name="EDITUSERID" ColumnName="EDITUSERID" />
+          <ScalarProperty Name="CREATEDATETIME" ColumnName="CREATEDATETIME" />
+          <ScalarProperty Name="CREATEUSERNAME" ColumnName="CREATEUSERNAME" />
+          <ScalarProperty Name="CREATEUSERID" ColumnName="CREATEUSERID" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+          <ScalarProperty Name="INDICATION" ColumnName="INDICATION" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="DOSAGE" ColumnName="DOSAGE" />
+          <ScalarProperty Name="DOSAGEFORMS" ColumnName="DOSAGEFORMS" />
+          <ScalarProperty Name="PACK" ColumnName="PACK" />
+          <ScalarProperty Name="COMPANY" ColumnName="COMPANY" />
+          <ScalarProperty Name="ISMEDICALINSURANCE" ColumnName="ISMEDICALINSURANCE" />
+          <ScalarProperty Name="ISPRESCRIPTION" ColumnName="ISPRESCRIPTION" />
+          <ScalarProperty Name="KINDNAME" ColumnName="KINDNAME" />
+          <ScalarProperty Name="TYPENAME" ColumnName="TYPENAME" />
+          <ScalarProperty Name="COMMONNAME" ColumnName="COMMONNAME" />
+          <ScalarProperty Name="ENNAME" ColumnName="ENNAME" />
+          <ScalarProperty Name="PINYINCODE" ColumnName="PINYINCODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="DRUGBANKID" ColumnName="DRUGBANKID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GN_DRUGALLELE">
+      <EntityTypeMapping TypeName="Model.GN_DRUGALLELE">
+        <MappingFragment StoreEntitySet="GN_DRUGALLELE">
+          <ScalarProperty Name="ISDELETED" ColumnName="ISDELETED" />
+          <ScalarProperty Name="OWNERNAME" ColumnName="OWNERNAME" />
+          <ScalarProperty Name="OWNERID" ColumnName="OWNERID" />
+          <ScalarProperty Name="EDITDATETIME" ColumnName="EDITDATETIME" />
+          <ScalarProperty Name="EDITUSERNAME" ColumnName="EDITUSERNAME" />
+          <ScalarProperty Name="EDITUSERID" ColumnName="EDITUSERID" />
+          <ScalarProperty Name="CREATEDATETIME" ColumnName="CREATEDATETIME" />
+          <ScalarProperty Name="CREATEUSERNAME" ColumnName="CREATEUSERNAME" />
+          <ScalarProperty Name="CREATEUSERID" ColumnName="CREATEUSERID" />
+          <ScalarProperty Name="EFFECT" ColumnName="EFFECT" />
+          <ScalarProperty Name="EFFECTTYPE" ColumnName="EFFECTTYPE" />
+          <ScalarProperty Name="DRUGBANKID" ColumnName="DRUGBANKID" />
+          <ScalarProperty Name="GENEALLELEID" ColumnName="GENEALLELEID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GN_GENE">
+      <EntityTypeMapping TypeName="Model.GN_GENE">
+        <MappingFragment StoreEntitySet="GN_GENE">
+          <ScalarProperty Name="REFSEQUENCE" ColumnName="REFSEQUENCE" />
+          <ScalarProperty Name="ISDELETED" ColumnName="ISDELETED" />
+          <ScalarProperty Name="OWNERNAME" ColumnName="OWNERNAME" />
+          <ScalarProperty Name="OWNERID" ColumnName="OWNERID" />
+          <ScalarProperty Name="EDITDATETIME" ColumnName="EDITDATETIME" />
+          <ScalarProperty Name="EDITUSERNAME" ColumnName="EDITUSERNAME" />
+          <ScalarProperty Name="EDITUSERID" ColumnName="EDITUSERID" />
+          <ScalarProperty Name="CREATEDATETIME" ColumnName="CREATEDATETIME" />
+          <ScalarProperty Name="CREATEUSERNAME" ColumnName="CREATEUSERNAME" />
+          <ScalarProperty Name="CREATEUSERID" ColumnName="CREATEUSERID" />
+          <ScalarProperty Name="SYNONYMNAME" ColumnName="SYNONYMNAME" />
+          <ScalarProperty Name="GENENAME" ColumnName="GENENAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GN_GENEALLELE">
+      <EntityTypeMapping TypeName="Model.GN_GENEALLELE">
+        <MappingFragment StoreEntitySet="GN_GENEALLELE">
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="ISDELETED" ColumnName="ISDELETED" />
+          <ScalarProperty Name="OWNERNAME" ColumnName="OWNERNAME" />
+          <ScalarProperty Name="OWNERID" ColumnName="OWNERID" />
+          <ScalarProperty Name="EDITDATETIME" ColumnName="EDITDATETIME" />
+          <ScalarProperty Name="EDITUSERNAME" ColumnName="EDITUSERNAME" />
+          <ScalarProperty Name="EDITUSERID" ColumnName="EDITUSERID" />
+          <ScalarProperty Name="CREATEDATETIME" ColumnName="CREATEDATETIME" />
+          <ScalarProperty Name="CREATEUSERNAME" ColumnName="CREATEUSERNAME" />
+          <ScalarProperty Name="CREATEUSERID" ColumnName="CREATEUSERID" />
+          <ScalarProperty Name="STANDARDNAME" ColumnName="STANDARDNAME" />
+          <ScalarProperty Name="SYNONYMNAME" ColumnName="SYNONYMNAME" />
+          <ScalarProperty Name="GENEID" ColumnName="GENEID" />
+          <ScalarProperty Name="GENEALLELENAME" ColumnName="GENEALLELENAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GN_GENEALLELELOCUS">
+      <EntityTypeMapping TypeName="Model.GN_GENEALLELELOCUS">
+        <MappingFragment StoreEntitySet="GN_GENEALLELELOCUS">
+          <ScalarProperty Name="ISDELETED" ColumnName="ISDELETED" />
+          <ScalarProperty Name="OWNERNAME" ColumnName="OWNERNAME" />
+          <ScalarProperty Name="OWNERID" ColumnName="OWNERID" />
+          <ScalarProperty Name="EDITDATETIME" ColumnName="EDITDATETIME" />
+          <ScalarProperty Name="EDITUSERNAME" ColumnName="EDITUSERNAME" />
+          <ScalarProperty Name="EDITUSERID" ColumnName="EDITUSERID" />
+          <ScalarProperty Name="CREATEDATETIME" ColumnName="CREATEDATETIME" />
+          <ScalarProperty Name="CREATEUSERNAME" ColumnName="CREATEUSERNAME" />
+          <ScalarProperty Name="CREATEUSERID" ColumnName="CREATEUSERID" />
+          <ScalarProperty Name="VARIANTCODE" ColumnName="VARIANTCODE" />
+          <ScalarProperty Name="VARIANTCATEGORY" ColumnName="VARIANTCATEGORY" />
+          <ScalarProperty Name="VARIANTTYPE" ColumnName="VARIANTTYPE" />
+          <ScalarProperty Name="VARIANTVALUE" ColumnName="VARIANTVALUE" />
+          <ScalarProperty Name="STANDARDVALUE" ColumnName="STANDARDVALUE" />
+          <ScalarProperty Name="ENDPOSITION" ColumnName="ENDPOSITION" />
+          <ScalarProperty Name="STARTPOSITION" ColumnName="STARTPOSITION" />
+          <ScalarProperty Name="LOCUSTYPE" ColumnName="LOCUSTYPE" />
+          <ScalarProperty Name="GENEALLELEID" ColumnName="GENEALLELEID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HPN_ResultDesc">
+      <EntityTypeMapping TypeName="Model.HPN_ResultDesc">
+        <MappingFragment StoreEntitySet="HPN_ResultDesc">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ResultName" ColumnName="ResultName" />
+          <ScalarProperty Name="MaxScores" ColumnName="MaxScores" />
+          <ScalarProperty Name="MinScores" ColumnName="MinScores" />
+          <ScalarProperty Name="SubResultName" ColumnName="SubResultName" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HPN_SendVercodeLog">
+      <EntityTypeMapping TypeName="Model.HPN_SendVercodeLog">
+        <MappingFragment StoreEntitySet="HPN_SendVercodeLog">
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="FormUrl" ColumnName="FormUrl" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="InputTime" ColumnName="InputTime" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HPN_StandardAdvise">
+      <EntityTypeMapping TypeName="Model.HPN_StandardAdvise">
+        <MappingFragment StoreEntitySet="HPN_StandardAdvise">
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="BodyType" ColumnName="BodyType" />
+          <ScalarProperty Name="TemplateResultID" ColumnName="TemplateResultID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HPN_Template">
+      <EntityTypeMapping TypeName="Model.HPN_Template">
+        <MappingFragment StoreEntitySet="HPN_Template">
+          <ScalarProperty Name="LastModifyUser" ColumnName="LastModifyUser" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+          <ScalarProperty Name="Index" ColumnName="Index" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="TemplateQuarry" ColumnName="TemplateQuarry" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HPN_TemplateItem">
+      <EntityTypeMapping TypeName="Model.HPN_TemplateItem">
+        <MappingFragment StoreEntitySet="HPN_TemplateItem">
+          <ScalarProperty Name="NextItem" ColumnName="NextItem" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Html" ColumnName="Html" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TagType" ColumnName="TagType" />
+          <ScalarProperty Name="Index" ColumnName="Index" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HPN_TemplateItemOptions">
+      <EntityTypeMapping TypeName="Model.HPN_TemplateItemOptions">
+        <MappingFragment StoreEntitySet="HPN_TemplateItemOptions">
+          <ScalarProperty Name="IdAttr" ColumnName="IdAttr" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="TemplateItemName" ColumnName="TemplateItemName" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HPN_TemplateItemResult">
+      <EntityTypeMapping TypeName="Model.HPN_TemplateItemResult">
+        <MappingFragment StoreEntitySet="HPN_TemplateItemResult">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HPN_TestResult">
+      <EntityTypeMapping TypeName="Model.HPN_TestResult">
+        <MappingFragment StoreEntitySet="HPN_TestResult">
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="OtherTestNo" ColumnName="OtherTestNo" />
+          <ScalarProperty Name="TestNo" ColumnName="TestNo" />
+          <ScalarProperty Name="InputTime" ColumnName="InputTime" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HPN_TestResultDetails">
+      <EntityTypeMapping TypeName="Model.HPN_TestResultDetails">
+        <MappingFragment StoreEntitySet="HPN_TestResultDetails">
+          <ScalarProperty Name="ItemResult" ColumnName="ItemResult" />
+          <ScalarProperty Name="ItemResultID" ColumnName="ItemResultID" />
+          <ScalarProperty Name="TemplateItemName" ColumnName="TemplateItemName" />
+          <ScalarProperty Name="TestNo" ColumnName="TestNo" />
+          <ScalarProperty Name="InputTime" ColumnName="InputTime" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HPN_Users">
+      <EntityTypeMapping TypeName="Model.HPN_Users">
+        <MappingFragment StoreEntitySet="HPN_Users">
+          <ScalarProperty Name="LastModifyUser" ColumnName="LastModifyUser" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="VipLevel" ColumnName="VipLevel" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LoginPwd" ColumnName="LoginPwd" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_ACTIVITYLOG">
+      <EntityTypeMapping TypeName="Model.HR_ACTIVITYLOG">
+        <MappingFragment StoreEntitySet="HR_ACTIVITYLOG">
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+          <ScalarProperty Name="CUSTOMERID" ColumnName="CUSTOMERID" />
+          <ScalarProperty Name="ACTIVITYLOGTYPENAME" ColumnName="ACTIVITYLOGTYPENAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_ANNUALINCOME">
+      <EntityTypeMapping TypeName="Model.HR_ANNUALINCOME">
+        <MappingFragment StoreEntitySet="HR_ANNUALINCOME">
+          <ScalarProperty Name="MODIFYBY" ColumnName="MODIFYBY" />
+          <ScalarProperty Name="MODIFYTIME" ColumnName="MODIFYTIME" />
+          <ScalarProperty Name="CREATBY" ColumnName="CREATBY" />
+          <ScalarProperty Name="CREATTIME" ColumnName="CREATTIME" />
+          <ScalarProperty Name="ANNUALINCOME" ColumnName="ANNUALINCOME" />
+          <ScalarProperty Name="PERSONID" ColumnName="PERSONID" />
+          <ScalarProperty Name="ANNUALINCOMEID" ColumnName="ANNUALINCOMEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_AREA">
+      <EntityTypeMapping TypeName="Model.HR_AREA">
+        <MappingFragment StoreEntitySet="HR_AREA">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="PARENTID" ColumnName="PARENTID" />
+          <ScalarProperty Name="AREANAME" ColumnName="AREANAME" />
+          <ScalarProperty Name="AREAID" ColumnName="AREAID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_ATTACHMENT">
+      <EntityTypeMapping TypeName="Model.HR_ATTACHMENT">
+        <MappingFragment StoreEntitySet="HR_ATTACHMENT">
+          <ScalarProperty Name="EDITDATE" ColumnName="EDITDATE" />
+          <ScalarProperty Name="EDITUSER" ColumnName="EDITUSER" />
+          <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+          <ScalarProperty Name="CREATEUSER" ColumnName="CREATEUSER" />
+          <ScalarProperty Name="ATTACHMENTPATH" ColumnName="ATTACHMENTPATH" />
+          <ScalarProperty Name="ATTACHMENTURL" ColumnName="ATTACHMENTURL" />
+          <ScalarProperty Name="ATTACHMENTID" ColumnName="ATTACHMENTID" />
+          <ScalarProperty Name="RECORDID" ColumnName="RECORDID" />
+          <ScalarProperty Name="ATTACHMENTRECORDID" ColumnName="ATTACHMENTRECORDID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_CNR_USER">
+      <EntityTypeMapping TypeName="Model.HR_CNR_USER">
+        <MappingFragment StoreEntitySet="HR_CNR_USER">
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="AGE" ColumnName="AGE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="IDCARD" ColumnName="IDCARD" />
+          <ScalarProperty Name="MODIFYBY" ColumnName="MODIFYBY" />
+          <ScalarProperty Name="MODIFYTIME" ColumnName="MODIFYTIME" />
+          <ScalarProperty Name="CREATBY" ColumnName="CREATBY" />
+          <ScalarProperty Name="CREATTIME" ColumnName="CREATTIME" />
+          <ScalarProperty Name="DISEASE" ColumnName="DISEASE" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="LOCALISM" ColumnName="LOCALISM" />
+          <ScalarProperty Name="PERSONID" ColumnName="PERSONID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_DISEASE">
+      <EntityTypeMapping TypeName="Model.HR_DISEASE">
+        <MappingFragment StoreEntitySet="HR_DISEASE">
+          <ScalarProperty Name="PINYINCODE" ColumnName="PINYINCODE" />
+          <ScalarProperty Name="CATEGORYCODE" ColumnName="CATEGORYCODE" />
+          <ScalarProperty Name="CATEGORYID" ColumnName="CATEGORYID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="VERSION" ColumnName="VERSION" />
+          <ScalarProperty Name="STANDARD" ColumnName="STANDARD" />
+          <ScalarProperty Name="DISEASENAME" ColumnName="DISEASENAME" />
+          <ScalarProperty Name="DISEASECODE" ColumnName="DISEASECODE" />
+          <ScalarProperty Name="DISEASEID" ColumnName="DISEASEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_DISEASECATEGORY">
+      <EntityTypeMapping TypeName="Model.HR_DISEASECATEGORY">
+        <MappingFragment StoreEntitySet="HR_DISEASECATEGORY">
+          <ScalarProperty Name="ENDCODE" ColumnName="ENDCODE" />
+          <ScalarProperty Name="STARTCODE" ColumnName="STARTCODE" />
+          <ScalarProperty Name="CATEGORYCODE" ColumnName="CATEGORYCODE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="PARENTID" ColumnName="PARENTID" />
+          <ScalarProperty Name="CATEGORYNAME" ColumnName="CATEGORYNAME" />
+          <ScalarProperty Name="CATEGORYID" ColumnName="CATEGORYID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_DISEASEHISTORY">
+      <EntityTypeMapping TypeName="Model.HR_DISEASEHISTORY">
+        <MappingFragment StoreEntitySet="HR_DISEASEHISTORY">
+          <ScalarProperty Name="ISREAPPEAR" ColumnName="ISREAPPEAR" />
+          <ScalarProperty Name="GENE" ColumnName="GENE" />
+          <ScalarProperty Name="M" ColumnName="M" />
+          <ScalarProperty Name="N" ColumnName="N" />
+          <ScalarProperty Name="TUMOR" ColumnName="TUMOR" />
+          <ScalarProperty Name="CLINICALSTAGES" ColumnName="CLINICALSTAGES" />
+          <ScalarProperty Name="CELLULATYPE" ColumnName="CELLULATYPE" />
+          <ScalarProperty Name="CANCERPOSITION" ColumnName="CANCERPOSITION" />
+          <ScalarProperty Name="CANCERNAME" ColumnName="CANCERNAME" />
+          <ScalarProperty Name="CANCERCODE" ColumnName="CANCERCODE" />
+          <ScalarProperty Name="ISCANCER" ColumnName="ISCANCER" />
+          <ScalarProperty Name="SYMPTOMDESCRIPTION" ColumnName="SYMPTOMDESCRIPTION" />
+          <ScalarProperty Name="CONFIRMEDRELUST" ColumnName="CONFIRMEDRELUST" />
+          <ScalarProperty Name="CONFIRMEDMODE" ColumnName="CONFIRMEDMODE" />
+          <ScalarProperty Name="CONFIRMEDADDRESS" ColumnName="CONFIRMEDADDRESS" />
+          <ScalarProperty Name="CONFIRMEDAGE" ColumnName="CONFIRMEDAGE" />
+          <ScalarProperty Name="CONFIRMEDTIME" ColumnName="CONFIRMEDTIME" />
+          <ScalarProperty Name="RECOVERTIME" ColumnName="RECOVERTIME" />
+          <ScalarProperty Name="STARTTIME" ColumnName="STARTTIME" />
+          <ScalarProperty Name="EDITTIME" ColumnName="EDITTIME" />
+          <ScalarProperty Name="EDITUSER" ColumnName="EDITUSER" />
+          <ScalarProperty Name="CREATUSER" ColumnName="CREATUSER" />
+          <ScalarProperty Name="HOSPITAL" ColumnName="HOSPITAL" />
+          <ScalarProperty Name="CREATTIME" ColumnName="CREATTIME" />
+          <ScalarProperty Name="TREATPROCESS" ColumnName="TREATPROCESS" />
+          <ScalarProperty Name="ANNUALINCOME" ColumnName="ANNUALINCOME" />
+          <ScalarProperty Name="DISEASENAME" ColumnName="DISEASENAME" />
+          <ScalarProperty Name="PERSONID" ColumnName="PERSONID" />
+          <ScalarProperty Name="DISEASEHISTORYID" ColumnName="DISEASEHISTORYID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_EXAMINECATEGORY">
+      <EntityTypeMapping TypeName="Model.HR_EXAMINECATEGORY">
+        <MappingFragment StoreEntitySet="HR_EXAMINECATEGORY">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="PARENTID" ColumnName="PARENTID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="CATEGORYNAME" ColumnName="CATEGORYNAME" />
+          <ScalarProperty Name="CATEGORYID" ColumnName="CATEGORYID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_EXAMINEITEMLABDETAIL">
+      <EntityTypeMapping TypeName="Model.HR_EXAMINEITEMLABDETAIL">
+        <MappingFragment StoreEntitySet="HR_EXAMINEITEMLABDETAIL">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="DETAILID" ColumnName="DETAILID" />
+          <ScalarProperty Name="TESTITEMID" ColumnName="TESTITEMID" />
+          <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_EXAMINEITEMS">
+      <EntityTypeMapping TypeName="Model.HR_EXAMINEITEMS">
+        <MappingFragment StoreEntitySet="HR_EXAMINEITEMS">
+          <ScalarProperty Name="CATEGORYID" ColumnName="CATEGORYID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="CODEVALUE" ColumnName="CODEVALUE" />
+          <ScalarProperty Name="VALUETYPE" ColumnName="VALUETYPE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="ITEMNAME" ColumnName="ITEMNAME" />
+          <ScalarProperty Name="ITEMNO" ColumnName="ITEMNO" />
+          <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_EXAMINERECORD">
+      <EntityTypeMapping TypeName="Model.HR_EXAMINERECORD">
+        <MappingFragment StoreEntitySet="HR_EXAMINERECORD">
+          <ScalarProperty Name="PERSONID" ColumnName="PERSONID" />
+          <ScalarProperty Name="EXAMDATE" ColumnName="EXAMDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="DOCTORNAME" ColumnName="DOCTORNAME" />
+          <ScalarProperty Name="VISITWAY" ColumnName="VISITWAY" />
+          <ScalarProperty Name="EXAMTYPE" ColumnName="EXAMTYPE" />
+          <ScalarProperty Name="EXAMNO" ColumnName="EXAMNO" />
+          <ScalarProperty Name="EXAMID" ColumnName="EXAMID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_EXAMINERESULT">
+      <EntityTypeMapping TypeName="Model.HR_EXAMINERESULT">
+        <MappingFragment StoreEntitySet="HR_EXAMINERESULT">
+          <ScalarProperty Name="EXAMID" ColumnName="EXAMID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="RESULT" ColumnName="RESULT" />
+          <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
+          <ScalarProperty Name="RESULTID" ColumnName="RESULTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_EXAMINETEMPLATES">
+      <EntityTypeMapping TypeName="Model.HR_EXAMINETEMPLATES">
+        <MappingFragment StoreEntitySet="HR_EXAMINETEMPLATES">
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="TEMPLATENAME" ColumnName="TEMPLATENAME" />
+          <ScalarProperty Name="TEMPLATENO" ColumnName="TEMPLATENO" />
+          <ScalarProperty Name="TEMPLATEID" ColumnName="TEMPLATEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_FD_DISEASE">
+      <EntityTypeMapping TypeName="Model.HR_FD_DISEASE">
+        <MappingFragment StoreEntitySet="HR_FD_DISEASE">
+          <ScalarProperty Name="TREATMENTRESULT" ColumnName="TREATMENTRESULT" />
+          <ScalarProperty Name="TREATMENT" ColumnName="TREATMENT" />
+          <ScalarProperty Name="TREATMENTHOSPITAL" ColumnName="TREATMENTHOSPITAL" />
+          <ScalarProperty Name="ISINFECTIOUS" ColumnName="ISINFECTIOUS" />
+          <ScalarProperty Name="DIAGNOSISAGE" ColumnName="DIAGNOSISAGE" />
+          <ScalarProperty Name="ATTACKDATA" ColumnName="ATTACKDATA" />
+          <ScalarProperty Name="DISEASENAME" ColumnName="DISEASENAME" />
+          <ScalarProperty Name="DISEASECODE" ColumnName="DISEASECODE" />
+          <ScalarProperty Name="MEMBERID" ColumnName="MEMBERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_FD_MEMBER">
+      <EntityTypeMapping TypeName="Model.HR_FD_MEMBER">
+        <MappingFragment StoreEntitySet="HR_FD_MEMBER">
+          <ScalarProperty Name="MODIFIEDBY" ColumnName="MODIFIEDBY" />
+          <ScalarProperty Name="MODIFIEDTIME" ColumnName="MODIFIEDTIME" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDTIME" ColumnName="CREATEDTIME" />
+          <ScalarProperty Name="DEADREASON" ColumnName="DEADREASON" />
+          <ScalarProperty Name="ISALIVE" ColumnName="ISALIVE" />
+          <ScalarProperty Name="ISIDENTICAL" ColumnName="ISIDENTICAL" />
+          <ScalarProperty Name="ISTWINS" ColumnName="ISTWINS" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="RELATIONSHIP" ColumnName="RELATIONSHIP" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_FD_RELATION">
+      <EntityTypeMapping TypeName="Model.HR_FD_RELATION">
+        <MappingFragment StoreEntitySet="HR_FD_RELATION">
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="SORT" ColumnName="SORT" />
+          <ScalarProperty Name="APPLY" ColumnName="APPLY" />
+          <ScalarProperty Name="REQUIRD" ColumnName="REQUIRD" />
+          <ScalarProperty Name="GENERATE" ColumnName="GENERATE" />
+          <ScalarProperty Name="SIDE" ColumnName="SIDE" />
+          <ScalarProperty Name="VALUE" ColumnName="VALUE" />
+          <ScalarProperty Name="TEXT" ColumnName="TEXT" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_FILEUPLOAD">
+      <EntityTypeMapping TypeName="Model.HR_FILEUPLOAD">
+        <MappingFragment StoreEntitySet="HR_FILEUPLOAD">
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="MODIFYBY" ColumnName="MODIFYBY" />
+          <ScalarProperty Name="MODIFYTIME" ColumnName="MODIFYTIME" />
+          <ScalarProperty Name="CREATBY" ColumnName="CREATBY" />
+          <ScalarProperty Name="CREATTIME" ColumnName="CREATTIME" />
+          <ScalarProperty Name="FILENAME" ColumnName="FILENAME" />
+          <ScalarProperty Name="FILEPAH" ColumnName="FILEPAH" />
+          <ScalarProperty Name="FORMID" ColumnName="FORMID" />
+          <ScalarProperty Name="MODELCODE" ColumnName="MODELCODE" />
+          <ScalarProperty Name="MODELNAME" ColumnName="MODELNAME" />
+          <ScalarProperty Name="FILEUPLOADID" ColumnName="FILEUPLOADID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_IMAGEEXAMINATION">
+      <EntityTypeMapping TypeName="Model.HR_IMAGEEXAMINATION">
+        <MappingFragment StoreEntitySet="HR_IMAGEEXAMINATION">
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="AUDITDOCTOR" ColumnName="AUDITDOCTOR" />
+          <ScalarProperty Name="REPORTDOCTOR" ColumnName="REPORTDOCTOR" />
+          <ScalarProperty Name="REPORTTIME" ColumnName="REPORTTIME" />
+          <ScalarProperty Name="REPORTCONTENT" ColumnName="REPORTCONTENT" />
+          <ScalarProperty Name="CHECKPOSITION" ColumnName="CHECKPOSITION" />
+          <ScalarProperty Name="DEPARTMENT" ColumnName="DEPARTMENT" />
+          <ScalarProperty Name="CHECKTIME" ColumnName="CHECKTIME" />
+          <ScalarProperty Name="CHECKTYPE" ColumnName="CHECKTYPE" />
+          <ScalarProperty Name="HISTORYID" ColumnName="HISTORYID" />
+          <ScalarProperty Name="IMAGEEXAMID" ColumnName="IMAGEEXAMID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_LABORATORYRESULT">
+      <EntityTypeMapping TypeName="Model.HR_LABORATORYRESULT">
+        <MappingFragment StoreEntitySet="HR_LABORATORYRESULT">
+          <ScalarProperty Name="TESTSTANDARD" ColumnName="TESTSTANDARD" />
+          <ScalarProperty Name="LABTABELNAME" ColumnName="LABTABELNAME" />
+          <ScalarProperty Name="LABMODELID" ColumnName="LABMODELID" />
+          <ScalarProperty Name="MEDICALHISATTACHMENT" ColumnName="MEDICALHISATTACHMENT" />
+          <ScalarProperty Name="CI" ColumnName="CI" />
+          <ScalarProperty Name="DIAGNOSISREPORT" ColumnName="DIAGNOSISREPORT" />
+          <ScalarProperty Name="HOSPITAL" ColumnName="HOSPITAL" />
+          <ScalarProperty Name="DIAGNOSIS" ColumnName="DIAGNOSIS" />
+          <ScalarProperty Name="DIAGNOSISTIME" ColumnName="DIAGNOSISTIME" />
+          <ScalarProperty Name="HISTORYID" ColumnName="HISTORYID" />
+          <ScalarProperty Name="LABRESULTID" ColumnName="LABRESULTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_LABORATORYTESTITEM">
+      <EntityTypeMapping TypeName="Model.HR_LABORATORYTESTITEM">
+        <MappingFragment StoreEntitySet="HR_LABORATORYTESTITEM">
+          <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
+          <ScalarProperty Name="LABRESULTID" ColumnName="LABRESULTID" />
+          <ScalarProperty Name="REFERENCEVALUE" ColumnName="REFERENCEVALUE" />
+          <ScalarProperty Name="NORMALVALUE" ColumnName="NORMALVALUE" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="RESLUT" ColumnName="RESLUT" />
+          <ScalarProperty Name="ITEMNAMEEN" ColumnName="ITEMNAMEEN" />
+          <ScalarProperty Name="ITEMNAME" ColumnName="ITEMNAME" />
+          <ScalarProperty Name="ORDERNUMBER" ColumnName="ORDERNUMBER" />
+          <ScalarProperty Name="TESTITEMID" ColumnName="TESTITEMID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_LABTESTRECORD">
+      <EntityTypeMapping TypeName="Model.HR_LABTESTRECORD">
+        <MappingFragment StoreEntitySet="HR_LABTESTRECORD">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="RECORDNO" ColumnName="RECORDNO" />
+          <ScalarProperty Name="ITEMNO" ColumnName="ITEMNO" />
+          <ScalarProperty Name="ITEMNAME" ColumnName="ITEMNAME" />
+          <ScalarProperty Name="ATTACHMENTS" ColumnName="ATTACHMENTS" />
+          <ScalarProperty Name="REPORT" ColumnName="REPORT" />
+          <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
+          <ScalarProperty Name="LABDOCTOR" ColumnName="LABDOCTOR" />
+          <ScalarProperty Name="HOSPITAL" ColumnName="HOSPITAL" />
+          <ScalarProperty Name="RECORDDATE" ColumnName="RECORDDATE" />
+          <ScalarProperty Name="RECORDID" ColumnName="RECORDID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_LABTESTRESULT">
+      <EntityTypeMapping TypeName="Model.HR_LABTESTRESULT">
+        <MappingFragment StoreEntitySet="HR_LABTESTRESULT">
+          <ScalarProperty Name="RECORDID" ColumnName="RECORDID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="ITEMVALUE" ColumnName="ITEMVALUE" />
+          <ScalarProperty Name="TESTITEMNAME" ColumnName="TESTITEMNAME" />
+          <ScalarProperty Name="TESTITERMNO" ColumnName="TESTITERMNO" />
+          <ScalarProperty Name="TESTITEMID" ColumnName="TESTITEMID" />
+          <ScalarProperty Name="LABRESULTID" ColumnName="LABRESULTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_PERSONDRUGHISTORY">
+      <EntityTypeMapping TypeName="Model.HR_PERSONDRUGHISTORY">
+        <MappingFragment StoreEntitySet="HR_PERSONDRUGHISTORY">
+          <ScalarProperty Name="PERSONID" ColumnName="PERSONID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="DOSAGE" ColumnName="DOSAGE" />
+          <ScalarProperty Name="USAGE" ColumnName="USAGE" />
+          <ScalarProperty Name="ENDDATE" ColumnName="ENDDATE" />
+          <ScalarProperty Name="STARTDATE" ColumnName="STARTDATE" />
+          <ScalarProperty Name="DRUGNAME" ColumnName="DRUGNAME" />
+          <ScalarProperty Name="HISTORYID" ColumnName="HISTORYID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_PERSONHEALTHHISTORY">
+      <EntityTypeMapping TypeName="Model.HR_PERSONHEALTHHISTORY">
+        <MappingFragment StoreEntitySet="HR_PERSONHEALTHHISTORY">
+          <ScalarProperty Name="RESULT" ColumnName="RESULT" />
+          <ScalarProperty Name="TREATMENT" ColumnName="TREATMENT" />
+          <ScalarProperty Name="ATTACHMENTS" ColumnName="ATTACHMENTS" />
+          <ScalarProperty Name="SYMPTOM" ColumnName="SYMPTOM" />
+          <ScalarProperty Name="PERSONID" ColumnName="PERSONID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="DISEASENAME" ColumnName="DISEASENAME" />
+          <ScalarProperty Name="DISEASENO" ColumnName="DISEASENO" />
+          <ScalarProperty Name="DISEASEID" ColumnName="DISEASEID" />
+          <ScalarProperty Name="ENDDATE" ColumnName="ENDDATE" />
+          <ScalarProperty Name="STARTDATE" ColumnName="STARTDATE" />
+          <ScalarProperty Name="HISTORYID" ColumnName="HISTORYID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_SCORE">
+      <EntityTypeMapping TypeName="Model.HR_SCORE">
+        <MappingFragment StoreEntitySet="HR_SCORE">
+          <ScalarProperty Name="ANSWERSJSON" ColumnName="ANSWERSJSON" />
+          <ScalarProperty Name="QUESTIONSJSON" ColumnName="QUESTIONSJSON" />
+          <ScalarProperty Name="ISSHOWRESULT" ColumnName="ISSHOWRESULT" />
+          <ScalarProperty Name="SHOWGRADE" ColumnName="SHOWGRADE" />
+          <ScalarProperty Name="TEMPLATELABEL" ColumnName="TEMPLATELABEL" />
+          <ScalarProperty Name="TEMPLATEDESCRIPTION" ColumnName="TEMPLATEDESCRIPTION" />
+          <ScalarProperty Name="TEMPLATEID" ColumnName="TEMPLATEID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="GRADE" ColumnName="GRADE" />
+          <ScalarProperty Name="TOTALSCORE" ColumnName="TOTALSCORE" />
+          <ScalarProperty Name="TEMPLATETITLE" ColumnName="TEMPLATETITLE" />
+          <ScalarProperty Name="TABLETYPE" ColumnName="TABLETYPE" />
+          <ScalarProperty Name="PERSONID" ColumnName="PERSONID" />
+          <ScalarProperty Name="SCOREID" ColumnName="SCOREID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_SCORETEMPLATE">
+      <EntityTypeMapping TypeName="Model.HR_SCORETEMPLATE">
+        <MappingFragment StoreEntitySet="HR_SCORETEMPLATE">
+          <ScalarProperty Name="ANSWERSJSON" ColumnName="ANSWERSJSON" />
+          <ScalarProperty Name="QUESTIONSJSON" ColumnName="QUESTIONSJSON" />
+          <ScalarProperty Name="MODIFYBY" ColumnName="MODIFYBY" />
+          <ScalarProperty Name="MODIFYTIME" ColumnName="MODIFYTIME" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+          <ScalarProperty Name="ISSHOWRESULT" ColumnName="ISSHOWRESULT" />
+          <ScalarProperty Name="SHOWGRADE" ColumnName="SHOWGRADE" />
+          <ScalarProperty Name="TEMPLATELABEL" ColumnName="TEMPLATELABEL" />
+          <ScalarProperty Name="TEMPLATEDESCRIPTION" ColumnName="TEMPLATEDESCRIPTION" />
+          <ScalarProperty Name="TEMPLATETITLE" ColumnName="TEMPLATETITLE" />
+          <ScalarProperty Name="TEMPLATEID" ColumnName="TEMPLATEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_SEEDOCTORHISTORY">
+      <EntityTypeMapping TypeName="Model.HR_SEEDOCTORHISTORY">
+        <MappingFragment StoreEntitySet="HR_SEEDOCTORHISTORY">
+          <ScalarProperty Name="MEDICALHISATTACHMENT" ColumnName="MEDICALHISATTACHMENT" />
+          <ScalarProperty Name="DIAGNOSISREPORT" ColumnName="DIAGNOSISREPORT" />
+          <ScalarProperty Name="HOSPITAL" ColumnName="HOSPITAL" />
+          <ScalarProperty Name="ICD10" ColumnName="ICD10" />
+          <ScalarProperty Name="DIAGNOSIS" ColumnName="DIAGNOSIS" />
+          <ScalarProperty Name="DIAGNOSISTIME" ColumnName="DIAGNOSISTIME" />
+          <ScalarProperty Name="PERSONID" ColumnName="PERSONID" />
+          <ScalarProperty Name="HISTORYID" ColumnName="HISTORYID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_TREATMENTHISTORY">
+      <EntityTypeMapping TypeName="Model.HR_TREATMENTHISTORY">
+        <MappingFragment StoreEntitySet="HR_TREATMENTHISTORY">
+          <ScalarProperty Name="CHEMOTHERAPYRESLUT" ColumnName="CHEMOTHERAPYRESLUT" />
+          <ScalarProperty Name="CHEMOTHERAPYDRUG" ColumnName="CHEMOTHERAPYDRUG" />
+          <ScalarProperty Name="CHEMOTHERAPYPROJECT" ColumnName="CHEMOTHERAPYPROJECT" />
+          <ScalarProperty Name="RADIOTHERAPYRESLUT" ColumnName="RADIOTHERAPYRESLUT" />
+          <ScalarProperty Name="RADIOTHERAPYDOSE" ColumnName="RADIOTHERAPYDOSE" />
+          <ScalarProperty Name="OPERATIONRESLUT" ColumnName="OPERATIONRESLUT" />
+          <ScalarProperty Name="OPERATIONTYPE" ColumnName="OPERATIONTYPE" />
+          <ScalarProperty Name="TREATMENTTYPE" ColumnName="TREATMENTTYPE" />
+          <ScalarProperty Name="TREATMENTHOSPITAL" ColumnName="TREATMENTHOSPITAL" />
+          <ScalarProperty Name="TREATMENTTIME" ColumnName="TREATMENTTIME" />
+          <ScalarProperty Name="DISEASEHISTORYID" ColumnName="DISEASEHISTORYID" />
+          <ScalarProperty Name="TREATMENTHISTORYID" ColumnName="TREATMENTHISTORYID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_USERGENE">
+      <EntityTypeMapping TypeName="Model.HR_USERGENE">
+        <MappingFragment StoreEntitySet="HR_USERGENE">
+          <ScalarProperty Name="COPYNUMBER2" ColumnName="COPYNUMBER2" />
+          <ScalarProperty Name="COPYNUMBER1" ColumnName="COPYNUMBER1" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="MODIFYBY" ColumnName="MODIFYBY" />
+          <ScalarProperty Name="MODIFYTIME" ColumnName="MODIFYTIME" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+          <ScalarProperty Name="ALLELE2ID" ColumnName="ALLELE2ID" />
+          <ScalarProperty Name="ALLELE1ID" ColumnName="ALLELE1ID" />
+          <ScalarProperty Name="GENEID" ColumnName="GENEID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOGINFO">
+      <EntityTypeMapping TypeName="Model.LOGINFO">
+        <MappingFragment StoreEntitySet="LOGINFO">
+          <ScalarProperty Name="LOGMESSAGE" ColumnName="LOGMESSAGE" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="LOGINNAME" ColumnName="LOGINNAME" />
+          <ScalarProperty Name="HOSTNAME" ColumnName="HOSTNAME" />
+          <ScalarProperty Name="MAC" ColumnName="MAC" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="LOGSOURCE" ColumnName="LOGSOURCE" />
+          <ScalarProperty Name="LOGGER" ColumnName="LOGGER" />
+          <ScalarProperty Name="LOGEXCEPTION" ColumnName="LOGEXCEPTION" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="LOGLEVEL" ColumnName="LOGLEVEL" />
+          <ScalarProperty Name="LOGTIME" ColumnName="LOGTIME" />
+          <ScalarProperty Name="LOGID" ColumnName="LOGID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESETPASSWORDLOG">
+      <EntityTypeMapping TypeName="Model.RESETPASSWORDLOG">
+        <MappingFragment StoreEntitySet="RESETPASSWORDLOG">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="RESETTYPE" ColumnName="RESETTYPE" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="INPUTTIME" ColumnName="INPUTTIME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERINFO">
+      <EntityTypeMapping TypeName="Model.USERINFO">
+        <MappingFragment StoreEntitySet="USERINFO">
+          <ScalarProperty Name="USERTYPE" ColumnName="USERTYPE" />
+          <ScalarProperty Name="OWNERNAME" ColumnName="OWNERNAME" />
+          <ScalarProperty Name="EDITUSERNAME" ColumnName="EDITUSERNAME" />
+          <ScalarProperty Name="CREATEUSERNAME" ColumnName="CREATEUSERNAME" />
+          <ScalarProperty Name="ISDELETED" ColumnName="ISDELETED" />
+          <ScalarProperty Name="OWNERID" ColumnName="OWNERID" />
+          <ScalarProperty Name="EDITDATETIME" ColumnName="EDITDATETIME" />
+          <ScalarProperty Name="EDITUSERID" ColumnName="EDITUSERID" />
+          <ScalarProperty Name="CREATEDATETIME" ColumnName="CREATEDATETIME" />
+          <ScalarProperty Name="CREATEUSERID" ColumnName="CREATEUSERID" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MOBILEPHONE" ColumnName="MOBILEPHONE" />
+          <ScalarProperty Name="LOGINPWD" ColumnName="LOGINPWD" />
+          <ScalarProperty Name="LOGINNAME" ColumnName="LOGINNAME" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_DRUG">
+      <EntityTypeMapping TypeName="Model.DUG_DRUG">
+        <MappingFragment StoreEntitySet="DUG_DRUG">
+          <ScalarProperty Name="ProteinBinding" ColumnName="ProteinBinding" />
+          <ScalarProperty Name="Absorption" ColumnName="Absorption" />
+          <ScalarProperty Name="Metabolism" ColumnName="Metabolism" />
+          <ScalarProperty Name="Toxicity" ColumnName="Toxicity" />
+          <ScalarProperty Name="MechanismOfAction" ColumnName="MechanismOfAction" />
+          <ScalarProperty Name="Pharmacodynamics" ColumnName="Pharmacodynamics" />
+          <ScalarProperty Name="Indication" ColumnName="Indication" />
+          <ScalarProperty Name="SuperClass" ColumnName="SuperClass" />
+          <ScalarProperty Name="DirectParent" ColumnName="DirectParent" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DrugBankId" ColumnName="DrugBankId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_DRUGINTERACTIONS">
+      <EntityTypeMapping TypeName="Model.DUG_DRUGINTERACTIONS">
+        <MappingFragment StoreEntitySet="DUG_DRUGINTERACTIONS">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LinkDrugBankId" ColumnName="LinkDrugBankId" />
+          <ScalarProperty Name="DrugBankId" ColumnName="DrugBankId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_DRUGSYNONYMS">
+      <EntityTypeMapping TypeName="Model.DUG_DRUGSYNONYMS">
+        <MappingFragment StoreEntitySet="DUG_DRUGSYNONYMS">
+          <ScalarProperty Name="Synonym" ColumnName="Synonym" />
+          <ScalarProperty Name="Coder" ColumnName="Coder" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="DrugBankId" ColumnName="DrugBankId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_ENZYMEPO">
+      <EntityTypeMapping TypeName="Model.DUG_ENZYMEPO">
+        <MappingFragment StoreEntitySet="DUG_ENZYMEPO">
+          <ScalarProperty Name="GeneSequence" ColumnName="GeneSequence" />
+          <ScalarProperty Name="AminoAcidSequence" ColumnName="AminoAcidSequence" />
+          <ScalarProperty Name="GeneName" ColumnName="GeneName" />
+          <ScalarProperty Name="PolypeptideId" ColumnName="PolypeptideId" />
+          <ScalarProperty Name="EnzymeId" ColumnName="EnzymeId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_ENZYMES">
+      <EntityTypeMapping TypeName="Model.DUG_ENZYMES">
+        <MappingFragment StoreEntitySet="DUG_ENZYMES">
+          <ScalarProperty Name="Organism" ColumnName="Organism" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EnzymesId" ColumnName="EnzymesId" />
+          <ScalarProperty Name="DrugBankId" ColumnName="DrugBankId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_ENZYMESACTIONS">
+      <EntityTypeMapping TypeName="Model.DUG_ENZYMESACTIONS">
+        <MappingFragment StoreEntitySet="DUG_ENZYMESACTIONS">
+          <ScalarProperty Name="Actions" ColumnName="Actions" />
+          <ScalarProperty Name="EnzymesId" ColumnName="EnzymesId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_ENZYMESIDENTIFIER">
+      <EntityTypeMapping TypeName="Model.DUG_ENZYMESIDENTIFIER">
+        <MappingFragment StoreEntitySet="DUG_ENZYMESIDENTIFIER">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Resource" ColumnName="Resource" />
+          <ScalarProperty Name="PolypeptideId" ColumnName="PolypeptideId" />
+          <ScalarProperty Name="EnzymePoId" ColumnName="EnzymePoId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_ENZYMESSYNONYMS">
+      <EntityTypeMapping TypeName="Model.DUG_ENZYMESSYNONYMS">
+        <MappingFragment StoreEntitySet="DUG_ENZYMESSYNONYMS">
+          <ScalarProperty Name="Synonyms" ColumnName="Synonyms" />
+          <ScalarProperty Name="PolypeptideId" ColumnName="PolypeptideId" />
+          <ScalarProperty Name="EnzymePoId" ColumnName="EnzymePoId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_EXTERNALIDENTIFIERS">
+      <EntityTypeMapping TypeName="Model.DUG_EXTERNALIDENTIFIERS">
+        <MappingFragment StoreEntitySet="DUG_EXTERNALIDENTIFIERS">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Resource" ColumnName="Resource" />
+          <ScalarProperty Name="DrugBankId" ColumnName="DrugBankId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_PRODUCTS">
+      <EntityTypeMapping TypeName="Model.DUG_PRODUCTS">
+        <MappingFragment StoreEntitySet="DUG_PRODUCTS">
+          <ScalarProperty Name="StartedMarketingOn" ColumnName="StartedMarketingOn" />
+          <ScalarProperty Name="Strength" ColumnName="Strength" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NdcId" ColumnName="NdcId" />
+          <ScalarProperty Name="DrugBankId" ColumnName="DrugBankId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_TARGETACTIONS">
+      <EntityTypeMapping TypeName="Model.DUG_TARGETACTIONS">
+        <MappingFragment StoreEntitySet="DUG_TARGETACTIONS">
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="TargetId" ColumnName="TargetId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_TARGETIDENTIFIER">
+      <EntityTypeMapping TypeName="Model.DUG_TARGETIDENTIFIER">
+        <MappingFragment StoreEntitySet="DUG_TARGETIDENTIFIER">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Resource" ColumnName="Resource" />
+          <ScalarProperty Name="PolypeptideId" ColumnName="PolypeptideId" />
+          <ScalarProperty Name="TargetPoId" ColumnName="TargetPoId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_TARGETS">
+      <EntityTypeMapping TypeName="Model.DUG_TARGETS">
+        <MappingFragment StoreEntitySet="DUG_TARGETS">
+          <ScalarProperty Name="Organism" ColumnName="Organism" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TargetId" ColumnName="TargetId" />
+          <ScalarProperty Name="DrugBankId" ColumnName="DrugBankId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_TARGETSPO">
+      <EntityTypeMapping TypeName="Model.DUG_TARGETSPO">
+        <MappingFragment StoreEntitySet="DUG_TARGETSPO">
+          <ScalarProperty Name="GeneSequence" ColumnName="GeneSequence" />
+          <ScalarProperty Name="AminoAcidSequence" ColumnName="AminoAcidSequence" />
+          <ScalarProperty Name="GeneName" ColumnName="GeneName" />
+          <ScalarProperty Name="PolypeptideId" ColumnName="PolypeptideId" />
+          <ScalarProperty Name="TargetId" ColumnName="TargetId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_TRANSPORTERACTIONS">
+      <EntityTypeMapping TypeName="Model.DUG_TRANSPORTERACTIONS">
+        <MappingFragment StoreEntitySet="DUG_TRANSPORTERACTIONS">
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="TransportersId" ColumnName="TransportersId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_TRANSPORTERIDENTIFIER">
+      <EntityTypeMapping TypeName="Model.DUG_TRANSPORTERIDENTIFIER">
+        <MappingFragment StoreEntitySet="DUG_TRANSPORTERIDENTIFIER">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Resource" ColumnName="Resource" />
+          <ScalarProperty Name="PolypeptideId" ColumnName="PolypeptideId" />
+          <ScalarProperty Name="TransporterPoId" ColumnName="TransporterPoId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_TRANSPORTERS">
+      <EntityTypeMapping TypeName="Model.DUG_TRANSPORTERS">
+        <MappingFragment StoreEntitySet="DUG_TRANSPORTERS">
+          <ScalarProperty Name="Organism" ColumnName="Organism" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TransportersId" ColumnName="TransportersId" />
+          <ScalarProperty Name="DrugBankId" ColumnName="DrugBankId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUG_TRANSPORTERSPO">
+      <EntityTypeMapping TypeName="Model.DUG_TRANSPORTERSPO">
+        <MappingFragment StoreEntitySet="DUG_TRANSPORTERSPO">
+          <ScalarProperty Name="GeneSequence" ColumnName="GeneSequence" />
+          <ScalarProperty Name="AminoAcidSequence" ColumnName="AminoAcidSequence" />
+          <ScalarProperty Name="GeneName" ColumnName="GeneName" />
+          <ScalarProperty Name="PolypeptideId" ColumnName="PolypeptideId" />
+          <ScalarProperty Name="TransportersId" ColumnName="TransportersId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_LABTESTITEM">
+      <EntityTypeMapping TypeName="Model.HR_LABTESTITEM">
+        <MappingFragment StoreEntitySet="HR_LABTESTITEM">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UPDATEBY" ColumnName="UPDATEBY" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="LOINCCODE" ColumnName="LOINCCODE" />
+          <ScalarProperty Name="VALUETYPE" ColumnName="VALUETYPE" />
+          <ScalarProperty Name="NORMALVALUE" ColumnName="NORMALVALUE" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="ITEMNAME" ColumnName="ITEMNAME" />
+          <ScalarProperty Name="TESTITEMNO" ColumnName="TESTITEMNO" />
+          <ScalarProperty Name="TESTITEMID" ColumnName="TESTITEMID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CR_DRUGEFFECT">
+      <EntityTypeMapping TypeName="Model.CR_DRUGEFFECT">
+        <MappingFragment StoreEntitySet="CR_DRUGEFFECT">
+          <ScalarProperty Name="DRUGINTERACTION" ColumnName="DRUGINTERACTION" />
+          <ScalarProperty Name="INTERDRUGID" ColumnName="INTERDRUGID" />
+          <ScalarProperty Name="DRUGID" ColumnName="DRUGID" />
+          <ScalarProperty Name="DISEASEID" ColumnName="DISEASEID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CR_GENEEFFECT">
+      <EntityTypeMapping TypeName="Model.CR_GENEEFFECT">
+        <MappingFragment StoreEntitySet="CR_GENEEFFECT">
+          <ScalarProperty Name="GENEDESC" ColumnName="GENEDESC" />
+          <ScalarProperty Name="GENENAME" ColumnName="GENENAME" />
+          <ScalarProperty Name="DRUGID" ColumnName="DRUGID" />
+          <ScalarProperty Name="DISEASEID" ColumnName="DISEASEID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

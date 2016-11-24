@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="HRDatabase" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HR_ICD10CATEGORY" EntityType="Model1.HR_ICD10CATEGORY" />
+    <EntitySet Name="HR_ICD10" EntityType="Model1.HR_ICD10" />
+    <EntitySet Name="HR_FAMILYINFO" EntityType="Model1.HR_FAMILYINFO" />
+    <EntitySet Name="HR_FAMILYMEMBER" EntityType="Model1.HR_FAMILYMEMBER" />
+    <EntitySet Name="HR_REF_CODEFILE" EntityType="Model1.HR_REF_CODEFILE" />
+    <EntitySet Name="HR_PERSONINFO" EntityType="Model1.HR_PERSONINFO" />
+  </EntityContainer>
+  <EntityType Name="HR_ICD10CATEGORY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="CATEGORYCODE" Type="String" MaxLength="7" FixedLength="true" Unicode="true" />
+    <Property Name="STARTCODE" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="ENDCODE" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="PARENTID" Type="Int32" Nullable="false" />
+    <Property Name="DISEASENAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_ICD10">
+    <Key>
+      <PropertyRef Name="DiseaseNo" />
+      <PropertyRef Name="DiseaseCode" />
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="DiseaseNo" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DiseaseCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DiseaseName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DiseaseEnName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PinYinCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_FAMILYINFO">
+    <Key>
+      <PropertyRef Name="FAMILYID" />
+    </Key>
+    <Property Name="FAMILYID" Type="Int32" Nullable="false" />
+    <Property Name="MASTER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="MASTERIDNO" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESSCODE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESSNAME" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="POSTCODE" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" />
+  </EntityType>
+  <EntityType Name="HR_FAMILYMEMBER">
+    <Key>
+      <PropertyRef Name="FMEMBERID" />
+    </Key>
+    <Property Name="FMEMBERID" Type="Int32" Nullable="false" />
+    <Property Name="FAMILYID" Type="Int32" />
+    <Property Name="PERSONID" Type="Int32" />
+    <Property Name="RELATIONSHIP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" />
+  </EntityType>
+  <EntityType Name="HR_REF_CODEFILE">
+    <Key>
+      <PropertyRef Name="CODEID" />
+    </Key>
+    <Property Name="CODEID" Type="Int32" Nullable="false" />
+    <Property Name="CODENO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" />
+    <Property Name="CODENAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CODEVALUE" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="HR_PERSONINFO">
+    <Key>
+      <PropertyRef Name="PERSONID" />
+    </Key>
+    <Property Name="PERSONID" Type="Int32" Nullable="false" />
+    <Property Name="PERSONNO" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GENDER" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="BIRTHDATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="NATIONALITY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="MARRIAGESTATUS" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="IDTYPE" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="IDNUMBER" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACTNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACTPHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EMAILADDRESS" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="CENSUSREGISTERFLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CENSUSADDRESSCODE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CENSUSADDRESSNAME" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CENSUSPOSTCODE" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="CURRENTADDRESSCODE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CURRENTADDRESSNAME" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CURRENTPOSTCODE" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="HIREDATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="OCCUPATIONCLASS" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDUCATIONLEVEL" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INSURANCETYPE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INSURANCETYPENAME" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="PAYMETHOD" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ABOTYPE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="RHTYPE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ALLERGYHISTORY" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="RISKFACTORS" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DISABILITYSTATUS" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="COMMUNITY" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="COMMUNITYCONTACT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMMUNITYCONTACTPHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RESPONSIBLEORGANIZATION" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="RESPONSIBLEORGANIZATIONID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RESPONSIBLEDOCTOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RESPONSIBLEDOCTORPHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" Nullable="false" />
+    <Property Name="ARCHIVEDATE" Type="DateTime" />
+    <Property Name="REMARK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BLOODTYPE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RECORDNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

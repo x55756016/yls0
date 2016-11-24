@@ -1,0 +1,1138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CRDatabase" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CR_DRUGUSE" EntityType="Model.CR_DRUGUSE" />
+    <EntitySet Name="CR_HABITS" EntityType="Model.CR_HABITS" />
+    <EntitySet Name="DUG_CNDRUG" EntityType="Model.DUG_CNDRUG" />
+    <EntitySet Name="GN_DRUGALLELE" EntityType="Model.GN_DRUGALLELE" />
+    <EntitySet Name="GN_GENE" EntityType="Model.GN_GENE" />
+    <EntitySet Name="GN_GENEALLELE" EntityType="Model.GN_GENEALLELE" />
+    <EntitySet Name="GN_GENEALLELELOCUS" EntityType="Model.GN_GENEALLELELOCUS" />
+    <EntitySet Name="HPN_ResultDesc" EntityType="Model.HPN_ResultDesc" />
+    <EntitySet Name="HPN_SendVercodeLog" EntityType="Model.HPN_SendVercodeLog" />
+    <EntitySet Name="HPN_StandardAdvise" EntityType="Model.HPN_StandardAdvise" />
+    <EntitySet Name="HPN_Template" EntityType="Model.HPN_Template" />
+    <EntitySet Name="HPN_TemplateItem" EntityType="Model.HPN_TemplateItem" />
+    <EntitySet Name="HPN_TemplateItemOptions" EntityType="Model.HPN_TemplateItemOptions" />
+    <EntitySet Name="HPN_TemplateItemResult" EntityType="Model.HPN_TemplateItemResult" />
+    <EntitySet Name="HPN_TestResult" EntityType="Model.HPN_TestResult" />
+    <EntitySet Name="HPN_TestResultDetails" EntityType="Model.HPN_TestResultDetails" />
+    <EntitySet Name="HPN_Users" EntityType="Model.HPN_Users" />
+    <EntitySet Name="HR_ACTIVITYLOG" EntityType="Model.HR_ACTIVITYLOG" />
+    <EntitySet Name="HR_ANNUALINCOME" EntityType="Model.HR_ANNUALINCOME" />
+    <EntitySet Name="HR_AREA" EntityType="Model.HR_AREA" />
+    <EntitySet Name="HR_ATTACHMENT" EntityType="Model.HR_ATTACHMENT" />
+    <EntitySet Name="HR_CNR_USER" EntityType="Model.HR_CNR_USER" />
+    <EntitySet Name="HR_DISEASE" EntityType="Model.HR_DISEASE" />
+    <EntitySet Name="HR_DISEASECATEGORY" EntityType="Model.HR_DISEASECATEGORY" />
+    <EntitySet Name="HR_DISEASEHISTORY" EntityType="Model.HR_DISEASEHISTORY" />
+    <EntitySet Name="HR_EXAMINECATEGORY" EntityType="Model.HR_EXAMINECATEGORY" />
+    <EntitySet Name="HR_EXAMINEITEMLABDETAIL" EntityType="Model.HR_EXAMINEITEMLABDETAIL" />
+    <EntitySet Name="HR_EXAMINEITEMS" EntityType="Model.HR_EXAMINEITEMS" />
+    <EntitySet Name="HR_EXAMINERECORD" EntityType="Model.HR_EXAMINERECORD" />
+    <EntitySet Name="HR_EXAMINERESULT" EntityType="Model.HR_EXAMINERESULT" />
+    <EntitySet Name="HR_EXAMINETEMPLATES" EntityType="Model.HR_EXAMINETEMPLATES" />
+    <EntitySet Name="HR_FD_DISEASE" EntityType="Model.HR_FD_DISEASE" />
+    <EntitySet Name="HR_FD_MEMBER" EntityType="Model.HR_FD_MEMBER" />
+    <EntitySet Name="HR_FD_RELATION" EntityType="Model.HR_FD_RELATION" />
+    <EntitySet Name="HR_FILEUPLOAD" EntityType="Model.HR_FILEUPLOAD" />
+    <EntitySet Name="HR_IMAGEEXAMINATION" EntityType="Model.HR_IMAGEEXAMINATION" />
+    <EntitySet Name="HR_LABORATORYRESULT" EntityType="Model.HR_LABORATORYRESULT" />
+    <EntitySet Name="HR_LABORATORYTESTITEM" EntityType="Model.HR_LABORATORYTESTITEM" />
+    <EntitySet Name="HR_LABTESTRECORD" EntityType="Model.HR_LABTESTRECORD" />
+    <EntitySet Name="HR_LABTESTRESULT" EntityType="Model.HR_LABTESTRESULT" />
+    <EntitySet Name="HR_PERSONDRUGHISTORY" EntityType="Model.HR_PERSONDRUGHISTORY" />
+    <EntitySet Name="HR_PERSONHEALTHHISTORY" EntityType="Model.HR_PERSONHEALTHHISTORY" />
+    <EntitySet Name="HR_SCORE" EntityType="Model.HR_SCORE" />
+    <EntitySet Name="HR_SCORETEMPLATE" EntityType="Model.HR_SCORETEMPLATE" />
+    <EntitySet Name="HR_SEEDOCTORHISTORY" EntityType="Model.HR_SEEDOCTORHISTORY" />
+    <EntitySet Name="HR_TREATMENTHISTORY" EntityType="Model.HR_TREATMENTHISTORY" />
+    <EntitySet Name="HR_USERGENE" EntityType="Model.HR_USERGENE" />
+    <EntitySet Name="LOGINFO" EntityType="Model.LOGINFO" />
+    <EntitySet Name="RESETPASSWORDLOG" EntityType="Model.RESETPASSWORDLOG" />
+    <EntitySet Name="USERINFO" EntityType="Model.USERINFO" />
+    <EntitySet Name="DUG_DRUG" EntityType="Model.DUG_DRUG" />
+    <EntitySet Name="DUG_DRUGINTERACTIONS" EntityType="Model.DUG_DRUGINTERACTIONS" />
+    <EntitySet Name="DUG_DRUGSYNONYMS" EntityType="Model.DUG_DRUGSYNONYMS" />
+    <EntitySet Name="DUG_ENZYMEPO" EntityType="Model.DUG_ENZYMEPO" />
+    <EntitySet Name="DUG_ENZYMES" EntityType="Model.DUG_ENZYMES" />
+    <EntitySet Name="DUG_ENZYMESACTIONS" EntityType="Model.DUG_ENZYMESACTIONS" />
+    <EntitySet Name="DUG_ENZYMESIDENTIFIER" EntityType="Model.DUG_ENZYMESIDENTIFIER" />
+    <EntitySet Name="DUG_ENZYMESSYNONYMS" EntityType="Model.DUG_ENZYMESSYNONYMS" />
+    <EntitySet Name="DUG_EXTERNALIDENTIFIERS" EntityType="Model.DUG_EXTERNALIDENTIFIERS" />
+    <EntitySet Name="DUG_PRODUCTS" EntityType="Model.DUG_PRODUCTS" />
+    <EntitySet Name="DUG_TARGETACTIONS" EntityType="Model.DUG_TARGETACTIONS" />
+    <EntitySet Name="DUG_TARGETIDENTIFIER" EntityType="Model.DUG_TARGETIDENTIFIER" />
+    <EntitySet Name="DUG_TARGETS" EntityType="Model.DUG_TARGETS" />
+    <EntitySet Name="DUG_TARGETSPO" EntityType="Model.DUG_TARGETSPO" />
+    <EntitySet Name="DUG_TRANSPORTERACTIONS" EntityType="Model.DUG_TRANSPORTERACTIONS" />
+    <EntitySet Name="DUG_TRANSPORTERIDENTIFIER" EntityType="Model.DUG_TRANSPORTERIDENTIFIER" />
+    <EntitySet Name="DUG_TRANSPORTERS" EntityType="Model.DUG_TRANSPORTERS" />
+    <EntitySet Name="DUG_TRANSPORTERSPO" EntityType="Model.DUG_TRANSPORTERSPO" />
+    <EntitySet Name="HR_LABTESTITEM" EntityType="Model.HR_LABTESTITEM" />
+    <EntitySet Name="CR_DRUGEFFECT" EntityType="Model.CR_DRUGEFFECT" />
+    <EntitySet Name="CR_GENEEFFECT" EntityType="Model.CR_GENEEFFECT" />
+  </EntityContainer>
+  <EntityType Name="CR_DRUGUSE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DISEASEID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USERID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DRUGTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DRUGNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DRUGID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TREATMENTDISEASES" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STARTTIME" Type="DateTime" />
+    <Property Name="ENDTIME" Type="DateTime" />
+    <Property Name="TIMESADAY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DOSE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UNITS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USEDAY" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ISNEWDRUG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CREATEUSERID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATETIME" Type="DateTime" />
+    <Property Name="EDITUSERID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EDITDATETIME" Type="DateTime" />
+    <Property Name="ISDELETED" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="OWNERID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CR_HABITS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DISEASEID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HABITSCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_CNDRUG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DRUGBANKID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PINYINCODE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ENNAME" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="COMMONNAME" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TYPENAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="KINDNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ISPRESCRIPTION" Type="Boolean" />
+    <Property Name="ISMEDICALINSURANCE" Type="Boolean" />
+    <Property Name="COMPANY" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="PACK" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DOSAGEFORMS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DOSAGE" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="INDICATION" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CONTENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PRICE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEUSERID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEUSERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATETIME" Type="DateTime" />
+    <Property Name="EDITUSERID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EDITUSERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EDITDATETIME" Type="DateTime" />
+    <Property Name="OWNERID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OWNERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ISDELETED" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GN_DRUGALLELE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GENEALLELEID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DRUGBANKID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EFFECTTYPE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="EFFECT" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEUSERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEUSERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDATETIME" Type="DateTime" />
+    <Property Name="EDITUSERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDITUSERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDITDATETIME" Type="DateTime" />
+    <Property Name="OWNERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OWNERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ISDELETED" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GN_GENE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GENENAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SYNONYMNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEUSERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEUSERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDATETIME" Type="DateTime" />
+    <Property Name="EDITUSERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDITUSERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDITDATETIME" Type="DateTime" />
+    <Property Name="OWNERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OWNERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ISDELETED" Type="Boolean" Nullable="false" />
+    <Property Name="REFSEQUENCE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="GN_GENEALLELE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GENEALLELENAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GENEID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SYNONYMNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STANDARDNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEUSERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEUSERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDATETIME" Type="DateTime" />
+    <Property Name="EDITUSERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDITUSERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDITDATETIME" Type="DateTime" />
+    <Property Name="OWNERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OWNERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ISDELETED" Type="Boolean" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="GN_GENEALLELELOCUS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GENEALLELEID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LOCUSTYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="STARTPOSITION" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ENDPOSITION" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="STANDARDVALUE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VARIANTVALUE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VARIANTTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VARIANTCATEGORY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VARIANTCODE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEUSERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEUSERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDATETIME" Type="DateTime" />
+    <Property Name="EDITUSERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDITUSERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDITDATETIME" Type="DateTime" />
+    <Property Name="OWNERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OWNERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ISDELETED" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HPN_ResultDesc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TemplateName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SubResultName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MinScores" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MaxScores" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ResultName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HPN_SendVercodeLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="InputTime" Type="DateTime" Nullable="false" />
+    <Property Name="MobilePhone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FormUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HPN_StandardAdvise">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TemplateResultID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="BodyType" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="Content" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HPN_Template">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TemplateQuarry" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Label" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ActionName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Icon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Index" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="Enabled" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="Type" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <Property Name="CreateUser" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LastModifyTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastModifyUser" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HPN_TemplateItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TemplateName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Index" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TagType" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Html" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NextItem" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HPN_TemplateItemOptions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TemplateName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TemplateItemName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Text" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IdAttr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HPN_TemplateItemResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ItemID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="Value" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HPN_TestResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="InputTime" Type="DateTime" Nullable="false" />
+    <Property Name="TestNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OtherTestNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TemplateName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="IP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Result" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HPN_TestResultDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="InputTime" Type="DateTime" Nullable="false" />
+    <Property Name="TestNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TemplateItemName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ItemResultID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ItemResult" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HPN_Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MobilePhone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LoginName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LoginPwd" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IDCard" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="VipLevel" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="Height" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="Weight" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="IsDelete" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="LastModifyTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastModifyUser" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_ACTIVITYLOG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ACTIVITYLOGTYPENAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CUSTOMERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COMMENT" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="HR_ANNUALINCOME">
+    <Key>
+      <PropertyRef Name="ANNUALINCOMEID" />
+    </Key>
+    <Property Name="ANNUALINCOMEID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PERSONID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ANNUALINCOME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATTIME" Type="DateTime" />
+    <Property Name="CREATBY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MODIFYTIME" Type="DateTime" />
+    <Property Name="MODIFYBY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_AREA">
+    <Key>
+      <PropertyRef Name="AREAID" />
+    </Key>
+    <Property Name="AREAID" Type="Int32" Nullable="false" />
+    <Property Name="AREANAME" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+    <Property Name="PARENTID" Type="Int32" Nullable="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" />
+  </EntityType>
+  <EntityType Name="HR_ATTACHMENT">
+    <Key>
+      <PropertyRef Name="ATTACHMENTRECORDID" />
+    </Key>
+    <Property Name="ATTACHMENTRECORDID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RECORDID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ATTACHMENTID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ATTACHMENTURL" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="ATTACHMENTPATH" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATETIME" Type="DateTime" />
+    <Property Name="EDITUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDITDATE" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="HR_CNR_USER">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PERSONID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LOCALISM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AREA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DISEASE" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CREATTIME" Type="DateTime" />
+    <Property Name="CREATBY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MODIFYTIME" Type="DateTime" />
+    <Property Name="MODIFYBY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDCARD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AGE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="SEX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_DISEASE">
+    <Key>
+      <PropertyRef Name="DISEASEID" />
+    </Key>
+    <Property Name="DISEASEID" Type="String" Nullable="false" MaxLength="18" FixedLength="true" Unicode="false" />
+    <Property Name="DISEASECODE" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+    <Property Name="DISEASENAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="STANDARD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="VERSION" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" />
+    <Property Name="CATEGORYID" Type="Int32" />
+    <Property Name="CATEGORYCODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PINYINCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="HR_DISEASECATEGORY">
+    <Key>
+      <PropertyRef Name="CATEGORYID" />
+    </Key>
+    <Property Name="CATEGORYID" Type="Int32" Nullable="false" />
+    <Property Name="CATEGORYNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PARENTID" Type="Int32" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" />
+    <Property Name="CATEGORYCODE" Type="String" MaxLength="7" FixedLength="true" Unicode="true" />
+    <Property Name="STARTCODE" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="ENDCODE" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_DISEASEHISTORY">
+    <Key>
+      <PropertyRef Name="DISEASEHISTORYID" />
+    </Key>
+    <Property Name="DISEASEHISTORYID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PERSONID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DISEASENAME" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="ANNUALINCOME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TREATPROCESS" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CREATTIME" Type="DateTime" />
+    <Property Name="HOSPITAL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CREATUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDITUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDITTIME" Type="DateTime" />
+    <Property Name="STARTTIME" Type="DateTime" />
+    <Property Name="RECOVERTIME" Type="DateTime" />
+    <Property Name="CONFIRMEDTIME" Type="DateTime" />
+    <Property Name="CONFIRMEDAGE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CONFIRMEDADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CONFIRMEDMODE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CONFIRMEDRELUST" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="SYMPTOMDESCRIPTION" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="ISCANCER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CANCERCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CANCERNAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CANCERPOSITION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CELLULATYPE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CLINICALSTAGES" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TUMOR" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="N" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="M" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="GENE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ISREAPPEAR" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_EXAMINECATEGORY">
+    <Key>
+      <PropertyRef Name="CATEGORYID" />
+    </Key>
+    <Property Name="CATEGORYID" Type="Int32" Nullable="false" />
+    <Property Name="CATEGORYNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PARENTID" Type="Int32" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" />
+  </EntityType>
+  <EntityType Name="HR_EXAMINEITEMLABDETAIL">
+    <Key>
+      <PropertyRef Name="DETAILID" />
+    </Key>
+    <Property Name="ITEMID" Type="Int32" />
+    <Property Name="TESTITEMID" Type="Int32" />
+    <Property Name="DETAILID" Type="Int32" Nullable="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" />
+  </EntityType>
+  <EntityType Name="HR_EXAMINEITEMS">
+    <Key>
+      <PropertyRef Name="ITEMID" />
+    </Key>
+    <Property Name="ITEMID" Type="Int32" Nullable="false" />
+    <Property Name="ITEMNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ITEMNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="VALUETYPE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CODEVALUE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="STATUS" Type="Byte" />
+    <Property Name="CATEGORYID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HR_EXAMINERECORD">
+    <Key>
+      <PropertyRef Name="EXAMID" />
+    </Key>
+    <Property Name="EXAMID" Type="Int32" Nullable="false" />
+    <Property Name="EXAMNO" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="EXAMTYPE" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="VISITWAY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="DOCTORNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" Nullable="false" />
+    <Property Name="EXAMDATE" Type="DateTime" />
+    <Property Name="PERSONID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HR_EXAMINERESULT">
+    <Key>
+      <PropertyRef Name="RESULTID" />
+    </Key>
+    <Property Name="RESULTID" Type="Int32" Nullable="false" />
+    <Property Name="ITEMID" Type="Int32" />
+    <Property Name="RESULT" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" Nullable="false" />
+    <Property Name="EXAMID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HR_EXAMINETEMPLATES">
+    <Key>
+      <PropertyRef Name="TEMPLATEID" />
+    </Key>
+    <Property Name="TEMPLATEID" Type="Int32" Nullable="false" />
+    <Property Name="TEMPLATENO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TEMPLATENAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="HR_FD_DISEASE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MEMBERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DISEASECODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DISEASENAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ATTACKDATA" Type="DateTime" />
+    <Property Name="DIAGNOSISAGE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ISINFECTIOUS" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TREATMENTHOSPITAL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TREATMENT" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="TREATMENTRESULT" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_FD_MEMBER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RELATIONSHIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ISTWINS" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ISIDENTICAL" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ISALIVE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="DEADREASON" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDTIME" Type="DateTime" />
+    <Property Name="CREATEDBY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MODIFIEDTIME" Type="DateTime" />
+    <Property Name="MODIFIEDBY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_FD_RELATION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TEXT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VALUE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="SIDE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GENERATE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="REQUIRD" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="APPLY" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="SORT" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="SEX" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_FILEUPLOAD">
+    <Key>
+      <PropertyRef Name="FILEUPLOADID" />
+    </Key>
+    <Property Name="FILEUPLOADID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MODELNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MODELCODE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FORMID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FILEPAH" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="FILENAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATTIME" Type="DateTime" />
+    <Property Name="CREATBY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MODIFYTIME" Type="DateTime" />
+    <Property Name="MODIFYBY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="REMARK" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_IMAGEEXAMINATION">
+    <Key>
+      <PropertyRef Name="IMAGEEXAMID" />
+    </Key>
+    <Property Name="IMAGEEXAMID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HISTORYID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CHECKTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CHECKTIME" Type="DateTime" />
+    <Property Name="DEPARTMENT" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CHECKPOSITION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="REPORTCONTENT" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="REPORTTIME" Type="DateTime" />
+    <Property Name="REPORTDOCTOR" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AUDITDOCTOR" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="REMARK" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_LABORATORYRESULT">
+    <Key>
+      <PropertyRef Name="LABRESULTID" />
+    </Key>
+    <Property Name="LABRESULTID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HISTORYID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DIAGNOSISTIME" Type="DateTime" />
+    <Property Name="DIAGNOSIS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="HOSPITAL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DIAGNOSISREPORT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CI" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="MEDICALHISATTACHMENT" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="LABMODELID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LABTABELNAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TESTSTANDARD" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_LABORATORYTESTITEM">
+    <Key>
+      <PropertyRef Name="TESTITEMID" />
+    </Key>
+    <Property Name="TESTITEMID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ORDERNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ITEMNAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ITEMNAMEEN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="RESLUT" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UOM" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="NORMALVALUE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="REFERENCEVALUE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="LABRESULTID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ITEMID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_LABTESTRECORD">
+    <Key>
+      <PropertyRef Name="RECORDID" />
+    </Key>
+    <Property Name="RECORDID" Type="Int32" Nullable="false" />
+    <Property Name="RECORDDATE" Type="DateTime" />
+    <Property Name="HOSPITAL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LABDOCTOR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ITEMID" Type="Int32" />
+    <Property Name="REPORT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ATTACHMENTS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ITEMNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ITEMNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RECORDNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" />
+  </EntityType>
+  <EntityType Name="HR_LABTESTRESULT">
+    <Key>
+      <PropertyRef Name="LABRESULTID" />
+    </Key>
+    <Property Name="LABRESULTID" Type="Int32" Nullable="false" />
+    <Property Name="TESTITEMID" Type="Int32" />
+    <Property Name="TESTITERMNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TESTITEMNAME" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ITEMVALUE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" />
+    <Property Name="RECORDID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HR_PERSONDRUGHISTORY">
+    <Key>
+      <PropertyRef Name="HISTORYID" />
+    </Key>
+    <Property Name="HISTORYID" Type="Int32" Nullable="false" />
+    <Property Name="DRUGNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STARTDATE" Type="DateTime" />
+    <Property Name="ENDDATE" Type="DateTime" />
+    <Property Name="USAGE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DOSAGE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PERSONID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HR_PERSONHEALTHHISTORY">
+    <Key>
+      <PropertyRef Name="HISTORYID" />
+    </Key>
+    <Property Name="HISTORYID" Type="Int32" Nullable="false" />
+    <Property Name="STARTDATE" Type="DateTime" />
+    <Property Name="ENDDATE" Type="DateTime" />
+    <Property Name="DISEASEID" Type="Int32" />
+    <Property Name="DISEASENO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DISEASENAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" />
+    <Property Name="PERSONID" Type="Int32" />
+    <Property Name="SYMPTOM" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ATTACHMENTS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TREATMENT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="RESULT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="HR_SCORE">
+    <Key>
+      <PropertyRef Name="SCOREID" />
+    </Key>
+    <Property Name="SCOREID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PERSONID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="TABLETYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TEMPLATETITLE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TOTALSCORE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="GRADE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CREATETIME" Type="DateTime" />
+    <Property Name="USERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TEMPLATEID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TEMPLATEDESCRIPTION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TEMPLATELABEL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SHOWGRADE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ISSHOWRESULT" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="QUESTIONSJSON" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ANSWERSJSON" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_SCORETEMPLATE">
+    <Key>
+      <PropertyRef Name="TEMPLATEID" />
+    </Key>
+    <Property Name="TEMPLATEID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TEMPLATETITLE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TEMPLATEDESCRIPTION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TEMPLATELABEL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SHOWGRADE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ISSHOWRESULT" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="CREATETIME" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MODIFYTIME" Type="DateTime" />
+    <Property Name="MODIFYBY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="QUESTIONSJSON" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ANSWERSJSON" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_SEEDOCTORHISTORY">
+    <Key>
+      <PropertyRef Name="HISTORYID" />
+    </Key>
+    <Property Name="HISTORYID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PERSONID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DIAGNOSISTIME" Type="DateTime" />
+    <Property Name="DIAGNOSIS" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="ICD10" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="HOSPITAL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DIAGNOSISREPORT" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="MEDICALHISATTACHMENT" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_TREATMENTHISTORY">
+    <Key>
+      <PropertyRef Name="TREATMENTHISTORYID" />
+    </Key>
+    <Property Name="TREATMENTHISTORYID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DISEASEHISTORYID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TREATMENTTIME" Type="DateTime" />
+    <Property Name="TREATMENTHOSPITAL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TREATMENTTYPE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="OPERATIONTYPE" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="OPERATIONRESLUT" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="RADIOTHERAPYDOSE" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="RADIOTHERAPYRESLUT" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CHEMOTHERAPYPROJECT" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CHEMOTHERAPYDRUG" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CHEMOTHERAPYRESLUT" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_USERGENE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GENEID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ALLELE1ID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ALLELE2ID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CREATETIME" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MODIFYTIME" Type="DateTime" />
+    <Property Name="MODIFYBY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USERID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COPYNUMBER1" Type="Int32" Nullable="false" />
+    <Property Name="COPYNUMBER2" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LOGINFO">
+    <Key>
+      <PropertyRef Name="LOGID" />
+    </Key>
+    <Property Name="LOGID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="LOGTIME" Type="DateTime" />
+    <Property Name="LOGLEVEL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TITLE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="LOGEXCEPTION" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="LOGGER" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="LOGSOURCE" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="IP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MAC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="HOSTNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LOGINNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LOGMESSAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RESETPASSWORDLOG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="INPUTTIME" Type="DateTime" />
+    <Property Name="USERID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RESETTYPE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="STATUS" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="USERINFO">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LOGINNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LOGINPWD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILEPHONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEUSERID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDATETIME" Type="DateTime" />
+    <Property Name="EDITUSERID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EDITDATETIME" Type="DateTime" />
+    <Property Name="OWNERID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ISDELETED" Type="Boolean" Nullable="false" />
+    <Property Name="CREATEUSERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDITUSERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OWNERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USERTYPE" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="DUG_DRUG">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DrugBankId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DrugBankId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" />
+    <Property Name="UpdateTime" Type="DateTime" />
+    <Property Name="DirectParent" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SuperClass" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Indication" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="Pharmacodynamics" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="MechanismOfAction" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="Toxicity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Metabolism" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="Absorption" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="ProteinBinding" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_DRUGINTERACTIONS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DrugBankId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DrugBankId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LinkDrugBankId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_DRUGSYNONYMS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DrugBankId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Language" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Coder" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Synonym" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_ENZYMEPO">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ItemId" />
+      <PropertyRef Name="EnzymeId" />
+      <PropertyRef Name="PolypeptideId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ItemId" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="EnzymeId" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PolypeptideId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GeneName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AminoAcidSequence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GeneSequence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DUG_ENZYMES">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DrugBankId" />
+      <PropertyRef Name="EnzymesId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DrugBankId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EnzymesId" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Organism" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_ENZYMESACTIONS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ItemId" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="EnzymesId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Actions" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_ENZYMESIDENTIFIER">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="EnzymePoId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="EnzymePoId" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="PolypeptideId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Resource" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Identifier" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_ENZYMESSYNONYMS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="EnzymePoId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="EnzymePoId" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="PolypeptideId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Synonyms" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_EXTERNALIDENTIFIERS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DrugBankId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DrugBankId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Resource" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Identifier" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_PRODUCTS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DrugBankId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DrugBankId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NdcId" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Strength" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="StartedMarketingOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="DUG_TARGETACTIONS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ItemId" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TargetId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Action" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_TARGETIDENTIFIER">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="PolypeptideId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TargetPoId" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="PolypeptideId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Resource" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Identifier" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_TARGETS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DrugBankId" />
+      <PropertyRef Name="TargetId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DrugBankId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TargetId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Organism" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_TARGETSPO">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ItemId" />
+      <PropertyRef Name="TargetId" />
+      <PropertyRef Name="PolypeptideId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ItemId" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TargetId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PolypeptideId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GeneName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AminoAcidSequence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GeneSequence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DUG_TRANSPORTERACTIONS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ItemId" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TransportersId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Action" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_TRANSPORTERIDENTIFIER">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TransporterPoId" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="PolypeptideId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Resource" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Identifier" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_TRANSPORTERS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DrugBankId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TransportersId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Organism" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DUG_TRANSPORTERSPO">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ItemId" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TransportersId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PolypeptideId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GeneName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AminoAcidSequence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GeneSequence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HR_LABTESTITEM">
+    <Key>
+      <PropertyRef Name="TESTITEMID" />
+    </Key>
+    <Property Name="TESTITEMID" Type="Int32" Nullable="false" />
+    <Property Name="TESTITEMNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ITEMNAME" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="UNIT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NORMALVALUE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VALUETYPE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="LOINCCODE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+    <Property Name="UPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Byte" />
+  </EntityType>
+  <EntityType Name="CR_DRUGEFFECT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DISEASEID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DRUGID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="INTERDRUGID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DRUGINTERACTION" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CR_GENEEFFECT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DISEASEID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DRUGID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GENENAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="GENEDESC" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

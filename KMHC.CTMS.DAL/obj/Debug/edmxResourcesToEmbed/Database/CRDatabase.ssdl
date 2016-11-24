@@ -1,0 +1,1347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CR_DRUGEFFECT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DISEASEID" Type="varchar2" MaxLength="50" />
+    <Property Name="DRUGID" Type="varchar2" MaxLength="50" />
+    <Property Name="INTERDRUGID" Type="varchar2" MaxLength="50" />
+    <Property Name="DRUGINTERACTION" Type="varchar2" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="CR_DRUGUSE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DISEASEID" Type="varchar2" MaxLength="50" />
+    <Property Name="USERID" Type="varchar2" MaxLength="50" />
+    <Property Name="DRUGTYPE" Type="varchar2" MaxLength="50" />
+    <Property Name="DRUGNAME" Type="nvarchar2" MaxLength="100" />
+    <Property Name="DRUGID" Type="varchar2" MaxLength="50" />
+    <Property Name="TREATMENTDISEASES" Type="nvarchar2" MaxLength="200" />
+    <Property Name="STARTTIME" Type="date" />
+    <Property Name="ENDTIME" Type="date" />
+    <Property Name="TIMESADAY" Type="varchar2" MaxLength="20" />
+    <Property Name="DOSE" Type="varchar2" MaxLength="100" />
+    <Property Name="UNITS" Type="varchar2" MaxLength="50" />
+    <Property Name="USEDAY" Type="number" Precision="38" Scale="0" />
+    <Property Name="ISNEWDRUG" Type="char" MaxLength="1" />
+    <Property Name="CREATEUSERID" Type="varchar2" MaxLength="50" />
+    <Property Name="CREATEDATETIME" Type="date" />
+    <Property Name="EDITUSERID" Type="varchar2" MaxLength="50" />
+    <Property Name="EDITDATETIME" Type="date" />
+    <Property Name="ISDELETED" Type="char" MaxLength="1" />
+    <Property Name="OWNERID" Type="varchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_GENEEFFECT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DISEASEID" Type="varchar2" MaxLength="50" />
+    <Property Name="DRUGID" Type="varchar2" MaxLength="50" />
+    <Property Name="GENENAME" Type="varchar2" MaxLength="200" />
+    <Property Name="GENEDESC" Type="varchar2" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="CR_HABITS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DISEASEID" Type="varchar2" MaxLength="50" />
+    <Property Name="HABITSCODE" Type="varchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DUG_CNDRUG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="DRUGBANKID" Type="varchar2" MaxLength="100" />
+    <Property Name="NAME" Type="varchar2" MaxLength="500" />
+    <Property Name="PINYINCODE" Type="varchar2" MaxLength="100" />
+    <Property Name="ENNAME" Type="varchar2" MaxLength="500" />
+    <Property Name="COMMONNAME" Type="varchar2" MaxLength="500" />
+    <Property Name="TYPENAME" Type="varchar2" MaxLength="100" />
+    <Property Name="KINDNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="ISPRESCRIPTION" Type="number" Precision="1" Scale="0" />
+    <Property Name="ISMEDICALINSURANCE" Type="number" Precision="1" Scale="0" />
+    <Property Name="COMPANY" Type="varchar2" MaxLength="1000" />
+    <Property Name="PACK" Type="varchar2" MaxLength="2000" />
+    <Property Name="DOSAGEFORMS" Type="varchar2" MaxLength="100" />
+    <Property Name="DOSAGE" Type="varchar2" MaxLength="4000" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="4000" />
+    <Property Name="INDICATION" Type="varchar2" MaxLength="4000" />
+    <Property Name="CONTENT" Type="clob" />
+    <Property Name="PRICE" Type="varchar2" MaxLength="500" />
+    <Property Name="CREATEUSERID" Type="varchar2" MaxLength="50" />
+    <Property Name="CREATEUSERNAME" Type="varchar2" MaxLength="50" />
+    <Property Name="CREATEDATETIME" Type="date" />
+    <Property Name="EDITUSERID" Type="varchar2" MaxLength="50" />
+    <Property Name="EDITUSERNAME" Type="varchar2" MaxLength="50" />
+    <Property Name="EDITDATETIME" Type="date" />
+    <Property Name="OWNERID" Type="varchar2" MaxLength="50" />
+    <Property Name="OWNERNAME" Type="varchar2" MaxLength="50" />
+    <Property Name="ISDELETED" Type="number" Precision="1" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_DRUG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_DRUG">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DrugBankId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DrugBankId" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar2" MaxLength="500" />
+    <Property Name="Description" Type="varchar2" MaxLength="4000" />
+    <Property Name="CreateTime" Type="date" />
+    <Property Name="UpdateTime" Type="date" />
+    <Property Name="DirectParent" Type="varchar2" MaxLength="100" />
+    <Property Name="SuperClass" Type="varchar2" MaxLength="100" />
+    <Property Name="Indication" Type="varchar2" MaxLength="3000" />
+    <Property Name="Pharmacodynamics" Type="varchar2" MaxLength="4000" />
+    <Property Name="MechanismOfAction" Type="varchar2" MaxLength="4000" />
+    <Property Name="Toxicity" Type="nclob" />
+    <Property Name="Metabolism" Type="varchar2" MaxLength="2000" />
+    <Property Name="Absorption" Type="varchar2" MaxLength="2000" />
+    <Property Name="ProteinBinding" Type="varchar2" MaxLength="2000" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_DRUGINTERACTIONS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_DRUGINTERACTIONS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DrugBankId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DrugBankId" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="LinkDrugBankId" Type="varchar2" MaxLength="50" />
+    <Property Name="Name" Type="varchar2" MaxLength="200" />
+    <Property Name="Description" Type="varchar2" MaxLength="1000" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_DRUGSYNONYMS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_DRUGSYNONYMS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DrugBankId" Type="varchar2" MaxLength="50" />
+    <Property Name="Language" Type="varchar2" MaxLength="500" />
+    <Property Name="Coder" Type="varchar2" MaxLength="500" />
+    <Property Name="Synonym" Type="varchar2" MaxLength="1000" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_ENZYMEPO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_ENZYMEPO">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ItemId" />
+      <PropertyRef Name="EnzymeId" />
+      <PropertyRef Name="PolypeptideId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ItemId" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EnzymeId" Type="varchar2" MaxLength="100" Nullable="false" />
+    <Property Name="PolypeptideId" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="GeneName" Type="varchar2" MaxLength="50" />
+    <Property Name="AminoAcidSequence" Type="nclob" />
+    <Property Name="GeneSequence" Type="nclob" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_ENZYMES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_ENZYMES">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DrugBankId" />
+      <PropertyRef Name="EnzymesId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DrugBankId" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="EnzymesId" Type="varchar2" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="varchar2" MaxLength="200" />
+    <Property Name="Organism" Type="varchar2" MaxLength="1000" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_ENZYMESACTIONS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_ENZYMESACTIONS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ItemId" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EnzymesId" Type="varchar2" MaxLength="100" />
+    <Property Name="Actions" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_ENZYMESIDENTIFIER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_ENZYMESIDENTIFIER">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="EnzymePoId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EnzymePoId" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PolypeptideId" Type="varchar2" MaxLength="50" />
+    <Property Name="Resource" Type="varchar2" MaxLength="200" />
+    <Property Name="Identifier" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_ENZYMESSYNONYMS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_ENZYMESSYNONYMS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="EnzymePoId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EnzymePoId" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PolypeptideId" Type="varchar2" MaxLength="50" />
+    <Property Name="Synonyms" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_EXTERNALIDENTIFIERS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_EXTERNALIDENTIFIERS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DrugBankId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DrugBankId" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="Resource" Type="varchar2" MaxLength="1000" />
+    <Property Name="Identifier" Type="varchar2" MaxLength="1000" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_PRODUCTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_PRODUCTS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DrugBankId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DrugBankId" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="NdcId" Type="varchar2" MaxLength="200" />
+    <Property Name="Name" Type="varchar2" MaxLength="200" />
+    <Property Name="Strength" Type="varchar2" MaxLength="500" />
+    <Property Name="StartedMarketingOn" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_TARGETACTIONS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_TARGETACTIONS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ItemId" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TargetId" Type="varchar2" MaxLength="50" />
+    <Property Name="Action" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_TARGETIDENTIFIER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_TARGETIDENTIFIER">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="PolypeptideId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TargetPoId" Type="number" Precision="38" Scale="0" />
+    <Property Name="PolypeptideId" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="Resource" Type="varchar2" MaxLength="200" />
+    <Property Name="Identifier" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_TARGETS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_TARGETS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DrugBankId" />
+      <PropertyRef Name="TargetId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DrugBankId" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="TargetId" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar2" MaxLength="500" />
+    <Property Name="Organism" Type="varchar2" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_TARGETSPO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_TARGETSPO">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ItemId" />
+      <PropertyRef Name="TargetId" />
+      <PropertyRef Name="PolypeptideId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ItemId" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TargetId" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="PolypeptideId" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="GeneName" Type="varchar2" MaxLength="50" />
+    <Property Name="AminoAcidSequence" Type="nclob" />
+    <Property Name="GeneSequence" Type="nclob" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_TRANSPORTERACTIONS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_TRANSPORTERACTIONS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ItemId" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TransportersId" Type="varchar2" MaxLength="100" />
+    <Property Name="Action" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_TRANSPORTERIDENTIFIER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_TRANSPORTERIDENTIFIER">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TransporterPoId" Type="number" Precision="38" Scale="0" />
+    <Property Name="PolypeptideId" Type="varchar2" MaxLength="50" />
+    <Property Name="Resource" Type="varchar2" MaxLength="500" />
+    <Property Name="Identifier" Type="varchar2" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_TRANSPORTERS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_TRANSPORTERS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DrugBankId" Type="varchar2" MaxLength="50" />
+    <Property Name="TransportersId" Type="varchar2" MaxLength="100" />
+    <Property Name="Name" Type="varchar2" MaxLength="200" />
+    <Property Name="Organism" Type="varchar2" MaxLength="1000" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.DUG_TRANSPORTERSPO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DUG_TRANSPORTERSPO">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ItemId" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TransportersId" Type="varchar2" MaxLength="100" />
+    <Property Name="PolypeptideId" Type="varchar2" MaxLength="50" />
+    <Property Name="GeneName" Type="varchar2" MaxLength="50" />
+    <Property Name="AminoAcidSequence" Type="nclob" />
+    <Property Name="GeneSequence" Type="nclob" />
+  </EntityType>
+  <EntityType Name="GN_DRUGALLELE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="GENEALLELEID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="DRUGBANKID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EFFECTTYPE" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EFFECT" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="CREATEUSERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATEUSERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATEDATETIME" Type="date" />
+    <Property Name="EDITUSERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EDITUSERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EDITDATETIME" Type="date" />
+    <Property Name="OWNERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="OWNERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="ISDELETED" Type="number" Precision="1" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GN_GENE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="GENENAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="SYNONYMNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATEUSERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATEUSERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATEDATETIME" Type="date" />
+    <Property Name="EDITUSERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EDITUSERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EDITDATETIME" Type="date" />
+    <Property Name="OWNERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="OWNERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="ISDELETED" Type="number" Precision="1" Scale="0" Nullable="false" />
+    <Property Name="REFSEQUENCE" Type="nclob" />
+  </EntityType>
+  <EntityType Name="GN_GENEALLELE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="GENEALLELENAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="GENEID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="SYNONYMNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="STANDARDNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATEUSERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATEUSERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATEDATETIME" Type="date" />
+    <Property Name="EDITUSERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EDITUSERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EDITDATETIME" Type="date" />
+    <Property Name="OWNERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="OWNERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="ISDELETED" Type="number" Precision="1" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="nvarchar2" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="GN_GENEALLELELOCUS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="GENEALLELEID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="LOCUSTYPE" Type="varchar2" MaxLength="10" />
+    <Property Name="STARTPOSITION" Type="number" Precision="38" Scale="0" />
+    <Property Name="ENDPOSITION" Type="number" Precision="38" Scale="0" />
+    <Property Name="STANDARDVALUE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="VARIANTVALUE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="VARIANTTYPE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="VARIANTCATEGORY" Type="nvarchar2" MaxLength="50" />
+    <Property Name="VARIANTCODE" Type="nvarchar2" MaxLength="200" />
+    <Property Name="CREATEUSERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATEUSERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATEDATETIME" Type="date" />
+    <Property Name="EDITUSERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EDITUSERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EDITDATETIME" Type="date" />
+    <Property Name="OWNERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="OWNERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="ISDELETED" Type="number" Precision="1" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HPN_ResultDesc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TemplateName" Type="nvarchar2" MaxLength="255" />
+    <Property Name="SubResultName" Type="nvarchar2" MaxLength="255" />
+    <Property Name="MinScores" Type="float" Precision="126" Scale="0" Nullable="false" />
+    <Property Name="MaxScores" Type="float" Precision="126" Scale="0" Nullable="false" />
+    <Property Name="ResultName" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="HPN_SendVercodeLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="InputTime" Type="date" Nullable="false" />
+    <Property Name="MobilePhone" Type="nvarchar2" MaxLength="255" />
+    <Property Name="FormUrl" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Remark" Type="nvarchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="HPN_StandardAdvise">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TemplateResultID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="BodyType" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="Content" Type="nvarchar2" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="HPN_Template">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="Title" Type="nvarchar2" MaxLength="255" />
+    <Property Name="TemplateQuarry" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Label" Type="nvarchar2" MaxLength="255" />
+    <Property Name="ActionName" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Icon" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Index" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="Enabled" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="Type" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar2" MaxLength="255" />
+    <Property Name="CreateTime" Type="date" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar2" MaxLength="255" />
+    <Property Name="LastModifyTime" Type="date" Nullable="false" />
+    <Property Name="LastModifyUser" Type="nvarchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="HPN_TemplateItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TemplateName" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Index" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TagType" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="Title" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Name" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Html" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Remark" Type="nvarchar2" MaxLength="255" />
+    <Property Name="NextItem" Type="nvarchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="HPN_TemplateItemOptions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TemplateName" Type="nvarchar2" MaxLength="255" />
+    <Property Name="TemplateItemName" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Text" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Value" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Name" Type="nvarchar2" MaxLength="255" />
+    <Property Name="IdAttr" Type="nvarchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="HPN_TemplateItemResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ItemID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="Value" Type="nvarchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="HPN_TestResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="InputTime" Type="date" Nullable="false" />
+    <Property Name="TestNo" Type="nvarchar2" MaxLength="255" />
+    <Property Name="OtherTestNo" Type="nvarchar2" MaxLength="255" />
+    <Property Name="UserID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TemplateName" Type="nvarchar2" MaxLength="255" />
+    <Property Name="State" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="IP" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Result" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Remark" Type="nvarchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="HPN_TestResultDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="InputTime" Type="date" Nullable="false" />
+    <Property Name="TestNo" Type="nvarchar2" MaxLength="255" />
+    <Property Name="TemplateItemName" Type="nvarchar2" MaxLength="255" />
+    <Property Name="ItemResultID" Type="nvarchar2" MaxLength="255" />
+    <Property Name="ItemResult" Type="nvarchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="HPN_Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="MobilePhone" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar2" MaxLength="255" />
+    <Property Name="LoginName" Type="nvarchar2" MaxLength="255" />
+    <Property Name="LoginPwd" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Name" Type="nvarchar2" MaxLength="255" />
+    <Property Name="IDCard" Type="nvarchar2" MaxLength="255" />
+    <Property Name="Type" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="VipLevel" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="Height" Type="float" Precision="126" Scale="0" Nullable="false" />
+    <Property Name="Weight" Type="float" Precision="126" Scale="0" Nullable="false" />
+    <Property Name="IsDelete" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="LastModifyTime" Type="date" Nullable="false" />
+    <Property Name="LastModifyUser" Type="nvarchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="HR_ACTIVITYLOG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="ACTIVITYLOGTYPENAME" Type="nvarchar2" MaxLength="100" />
+    <Property Name="CUSTOMERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="COMMENT" Type="nvarchar2" MaxLength="200" />
+    <Property Name="CREATEDATE" Type="date" />
+  </EntityType>
+  <EntityType Name="HR_ANNUALINCOME">
+    <Key>
+      <PropertyRef Name="ANNUALINCOMEID" />
+    </Key>
+    <Property Name="ANNUALINCOMEID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="PERSONID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="ANNUALINCOME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATTIME" Type="date" />
+    <Property Name="CREATBY" Type="nvarchar2" MaxLength="50" />
+    <Property Name="MODIFYTIME" Type="date" />
+    <Property Name="MODIFYBY" Type="nvarchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_AREA">
+    <Key>
+      <PropertyRef Name="AREAID" />
+    </Key>
+    <Property Name="AREAID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="AREANAME" Type="char" MaxLength="18" />
+    <Property Name="PARENTID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_ATTACHMENT">
+    <Key>
+      <PropertyRef Name="ATTACHMENTRECORDID" />
+    </Key>
+    <Property Name="ATTACHMENTRECORDID" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="RECORDID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="ATTACHMENTID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="ATTACHMENTURL" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="ATTACHMENTPATH" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="CREATEUSER" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATETIME" Type="date" />
+    <Property Name="EDITUSER" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EDITDATE" Type="date" />
+  </EntityType>
+  <EntityType Name="HR_CNR_USER">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="PERSONID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="LOCALISM" Type="nvarchar2" MaxLength="50" />
+    <Property Name="AREA" Type="nvarchar2" MaxLength="50" />
+    <Property Name="DISEASE" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="CREATTIME" Type="date" />
+    <Property Name="CREATBY" Type="nvarchar2" MaxLength="50" />
+    <Property Name="MODIFYTIME" Type="date" />
+    <Property Name="MODIFYBY" Type="nvarchar2" MaxLength="50" />
+    <Property Name="IDCARD" Type="nvarchar2" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="AGE" Type="number" Precision="38" Scale="0" />
+    <Property Name="SEX" Type="nvarchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_DISEASE">
+    <Key>
+      <PropertyRef Name="DISEASEID" />
+    </Key>
+    <Property Name="DISEASEID" Type="char" MaxLength="18" Nullable="false" />
+    <Property Name="DISEASECODE" Type="char" MaxLength="18" />
+    <Property Name="DISEASENAME" Type="varchar2" MaxLength="200" />
+    <Property Name="STANDARD" Type="varchar2" MaxLength="10" />
+    <Property Name="VERSION" Type="varchar2" MaxLength="10" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+    <Property Name="CATEGORYID" Type="number" Precision="9" Scale="0" />
+    <Property Name="CATEGORYCODE" Type="varchar2" MaxLength="10" />
+    <Property Name="PINYINCODE" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="HR_DISEASECATEGORY">
+    <Key>
+      <PropertyRef Name="CATEGORYID" />
+    </Key>
+    <Property Name="CATEGORYID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="CATEGORYNAME" Type="nvarchar2" MaxLength="100" />
+    <Property Name="PARENTID" Type="number" Precision="9" Scale="0" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+    <Property Name="CATEGORYCODE" Type="nchar" MaxLength="7" />
+    <Property Name="STARTCODE" Type="nchar" MaxLength="3" />
+    <Property Name="ENDCODE" Type="nchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="HR_DISEASEHISTORY">
+    <Key>
+      <PropertyRef Name="DISEASEHISTORYID" />
+    </Key>
+    <Property Name="DISEASEHISTORYID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="PERSONID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="DISEASENAME" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="ANNUALINCOME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="TREATPROCESS" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="CREATTIME" Type="date" />
+    <Property Name="HOSPITAL" Type="nvarchar2" MaxLength="500" />
+    <Property Name="CREATUSER" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EDITUSER" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EDITTIME" Type="date" />
+    <Property Name="STARTTIME" Type="date" />
+    <Property Name="RECOVERTIME" Type="date" />
+    <Property Name="CONFIRMEDTIME" Type="date" />
+    <Property Name="CONFIRMEDAGE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CONFIRMEDADDRESS" Type="nvarchar2" MaxLength="200" />
+    <Property Name="CONFIRMEDMODE" Type="nvarchar2" MaxLength="200" />
+    <Property Name="CONFIRMEDRELUST" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="SYMPTOMDESCRIPTION" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="ISCANCER" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CANCERCODE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CANCERNAME" Type="nvarchar2" MaxLength="200" />
+    <Property Name="CANCERPOSITION" Type="nvarchar2" MaxLength="200" />
+    <Property Name="CELLULATYPE" Type="nvarchar2" MaxLength="200" />
+    <Property Name="CLINICALSTAGES" Type="nvarchar2" MaxLength="50" />
+    <Property Name="TUMOR" Type="nvarchar2" MaxLength="200" />
+    <Property Name="N" Type="nvarchar2" MaxLength="200" />
+    <Property Name="M" Type="nvarchar2" MaxLength="200" />
+    <Property Name="GENE" Type="nvarchar2" MaxLength="200" />
+    <Property Name="ISREAPPEAR" Type="nvarchar2" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="HR_EXAMINECATEGORY">
+    <Key>
+      <PropertyRef Name="CATEGORYID" />
+    </Key>
+    <Property Name="CATEGORYID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="CATEGORYNAME" Type="varchar2" MaxLength="50" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="500" />
+    <Property Name="PARENTID" Type="number" Precision="9" Scale="0" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_EXAMINEITEMLABDETAIL">
+    <Key>
+      <PropertyRef Name="DETAILID" />
+    </Key>
+    <Property Name="ITEMID" Type="number" Precision="9" Scale="0" />
+    <Property Name="TESTITEMID" Type="number" Precision="9" Scale="0" />
+    <Property Name="DETAILID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_EXAMINEITEMS">
+    <Key>
+      <PropertyRef Name="ITEMID" />
+    </Key>
+    <Property Name="ITEMID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="ITEMNO" Type="varchar2" MaxLength="20" />
+    <Property Name="ITEMNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="500" />
+    <Property Name="VALUETYPE" Type="varchar2" MaxLength="3" />
+    <Property Name="CODEVALUE" Type="varchar2" MaxLength="50" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+    <Property Name="CATEGORYID" Type="number" Precision="9" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_EXAMINERECORD">
+    <Key>
+      <PropertyRef Name="EXAMID" />
+    </Key>
+    <Property Name="EXAMID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="EXAMNO" Type="varchar2" MaxLength="2000" />
+    <Property Name="EXAMTYPE" Type="varchar2" MaxLength="3" Nullable="false" />
+    <Property Name="VISITWAY" Type="varchar2" MaxLength="3" />
+    <Property Name="DOCTORNAME" Type="varchar2" MaxLength="50" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" Nullable="false" />
+    <Property Name="EXAMDATE" Type="date" />
+    <Property Name="PERSONID" Type="number" Precision="9" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_EXAMINERESULT">
+    <Key>
+      <PropertyRef Name="RESULTID" />
+    </Key>
+    <Property Name="RESULTID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="ITEMID" Type="number" Precision="9" Scale="0" />
+    <Property Name="RESULT" Type="varchar2" MaxLength="2000" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" Nullable="false" />
+    <Property Name="EXAMID" Type="number" Precision="9" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_EXAMINETEMPLATES">
+    <Key>
+      <PropertyRef Name="TEMPLATEID" />
+    </Key>
+    <Property Name="TEMPLATEID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="TEMPLATENO" Type="varchar2" MaxLength="20" />
+    <Property Name="TEMPLATENAME" Type="varchar2" MaxLength="50" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="HR_FD_DISEASE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="MEMBERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="DISEASECODE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="DISEASENAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="ATTACKDATA" Type="date" />
+    <Property Name="DIAGNOSISAGE" Type="number" Precision="38" Scale="0" />
+    <Property Name="ISINFECTIOUS" Type="number" Precision="38" Scale="0" />
+    <Property Name="TREATMENTHOSPITAL" Type="nvarchar2" MaxLength="200" />
+    <Property Name="TREATMENT" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="TREATMENTRESULT" Type="nvarchar2" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="HR_FD_MEMBER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="USERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="RELATIONSHIP" Type="nvarchar2" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="SEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="ISTWINS" Type="number" Precision="38" Scale="0" />
+    <Property Name="ISIDENTICAL" Type="number" Precision="38" Scale="0" />
+    <Property Name="ISALIVE" Type="number" Precision="38" Scale="0" />
+    <Property Name="DEADREASON" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATEDTIME" Type="date" />
+    <Property Name="CREATEDBY" Type="nvarchar2" MaxLength="50" />
+    <Property Name="MODIFIEDTIME" Type="date" />
+    <Property Name="MODIFIEDBY" Type="nvarchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_FD_RELATION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CODE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="TEXT" Type="nvarchar2" MaxLength="50" />
+    <Property Name="VALUE" Type="number" Precision="38" Scale="0" />
+    <Property Name="SIDE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="GENERATE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="REQUIRD" Type="number" Precision="38" Scale="0" />
+    <Property Name="APPLY" Type="number" Precision="38" Scale="0" />
+    <Property Name="SORT" Type="number" Precision="38" Scale="0" />
+    <Property Name="SEX" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_FILEUPLOAD">
+    <Key>
+      <PropertyRef Name="FILEUPLOADID" />
+    </Key>
+    <Property Name="FILEUPLOADID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="MODELNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="MODELCODE" Type="nvarchar2" MaxLength="200" />
+    <Property Name="FORMID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="FILEPAH" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="FILENAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CREATTIME" Type="date" />
+    <Property Name="CREATBY" Type="nvarchar2" MaxLength="50" />
+    <Property Name="MODIFYTIME" Type="date" />
+    <Property Name="MODIFYBY" Type="nvarchar2" MaxLength="50" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="HR_IMAGEEXAMINATION">
+    <Key>
+      <PropertyRef Name="IMAGEEXAMID" />
+    </Key>
+    <Property Name="IMAGEEXAMID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="HISTORYID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CHECKTYPE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CHECKTIME" Type="date" />
+    <Property Name="DEPARTMENT" Type="nvarchar2" MaxLength="100" />
+    <Property Name="CHECKPOSITION" Type="nvarchar2" MaxLength="200" />
+    <Property Name="REPORTCONTENT" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="REPORTTIME" Type="date" />
+    <Property Name="REPORTDOCTOR" Type="nvarchar2" MaxLength="100" />
+    <Property Name="AUDITDOCTOR" Type="nvarchar2" MaxLength="100" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="HR_LABORATORYRESULT">
+    <Key>
+      <PropertyRef Name="LABRESULTID" />
+    </Key>
+    <Property Name="LABRESULTID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="HISTORYID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="DIAGNOSISTIME" Type="date" />
+    <Property Name="DIAGNOSIS" Type="nvarchar2" MaxLength="200" />
+    <Property Name="HOSPITAL" Type="nvarchar2" MaxLength="200" />
+    <Property Name="DIAGNOSISREPORT" Type="nvarchar2" MaxLength="50" />
+    <Property Name="CI" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="MEDICALHISATTACHMENT" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="LABMODELID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="LABTABELNAME" Type="nvarchar2" MaxLength="200" />
+    <Property Name="TESTSTANDARD" Type="nvarchar2" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="HR_LABORATORYTESTITEM">
+    <Key>
+      <PropertyRef Name="TESTITEMID" />
+    </Key>
+    <Property Name="TESTITEMID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="ORDERNUMBER" Type="nvarchar2" MaxLength="50" />
+    <Property Name="ITEMNAME" Type="nvarchar2" MaxLength="200" />
+    <Property Name="ITEMNAMEEN" Type="nvarchar2" MaxLength="200" />
+    <Property Name="RESLUT" Type="nvarchar2" MaxLength="200" />
+    <Property Name="UOM" Type="nvarchar2" MaxLength="200" />
+    <Property Name="NORMALVALUE" Type="nvarchar2" MaxLength="200" />
+    <Property Name="REFERENCEVALUE" Type="nvarchar2" MaxLength="200" />
+    <Property Name="LABRESULTID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="ITEMID" Type="nvarchar2" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CANCERRECORD.HR_LABTESTITEM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="HR_LABTESTITEM">
+    <Key>
+      <PropertyRef Name="TESTITEMID" />
+    </Key>
+    <Property Name="TESTITEMID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="TESTITEMNO" Type="varchar2" MaxLength="100" />
+    <Property Name="ITEMNAME" Type="varchar2" MaxLength="500" />
+    <Property Name="UNIT" Type="varchar2" MaxLength="20" />
+    <Property Name="NORMALVALUE" Type="varchar2" MaxLength="100" />
+    <Property Name="VALUETYPE" Type="varchar2" MaxLength="3" />
+    <Property Name="LOINCCODE" Type="varchar2" MaxLength="100" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_LABTESTRECORD">
+    <Key>
+      <PropertyRef Name="RECORDID" />
+    </Key>
+    <Property Name="RECORDID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="RECORDDATE" Type="date" />
+    <Property Name="HOSPITAL" Type="varchar2" MaxLength="100" />
+    <Property Name="LABDOCTOR" Type="varchar2" MaxLength="100" />
+    <Property Name="ITEMID" Type="number" Precision="9" Scale="0" />
+    <Property Name="REPORT" Type="varchar2" MaxLength="500" />
+    <Property Name="ATTACHMENTS" Type="varchar2" MaxLength="500" />
+    <Property Name="ITEMNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="ITEMNO" Type="varchar2" MaxLength="20" />
+    <Property Name="RECORDNO" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_LABTESTRESULT">
+    <Key>
+      <PropertyRef Name="LABRESULTID" />
+    </Key>
+    <Property Name="LABRESULTID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="TESTITEMID" Type="number" Precision="9" Scale="0" />
+    <Property Name="TESTITERMNO" Type="varchar2" MaxLength="100" />
+    <Property Name="TESTITEMNAME" Type="varchar2" MaxLength="500" />
+    <Property Name="ITEMVALUE" Type="varchar2" MaxLength="100" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+    <Property Name="RECORDID" Type="number" Precision="9" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_PERSONDRUGHISTORY">
+    <Key>
+      <PropertyRef Name="HISTORYID" />
+    </Key>
+    <Property Name="HISTORYID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="DRUGNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="STARTDATE" Type="date" />
+    <Property Name="ENDDATE" Type="date" />
+    <Property Name="USAGE" Type="varchar2" MaxLength="100" />
+    <Property Name="DOSAGE" Type="varchar2" MaxLength="100" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="500" />
+    <Property Name="PERSONID" Type="number" Precision="9" Scale="0" />
+  </EntityType>
+  <EntityType Name="HR_PERSONHEALTHHISTORY">
+    <Key>
+      <PropertyRef Name="HISTORYID" />
+    </Key>
+    <Property Name="HISTORYID" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="STARTDATE" Type="date" />
+    <Property Name="ENDDATE" Type="date" />
+    <Property Name="DISEASEID" Type="number" Precision="9" Scale="0" />
+    <Property Name="DISEASENO" Type="varchar2" MaxLength="20" />
+    <Property Name="DISEASENAME" Type="varchar2" MaxLength="100" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="CREATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATEDATE" Type="date" />
+    <Property Name="UPDATEBY" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Precision="3" Scale="0" />
+    <Property Name="PERSONID" Type="number" Precision="9" Scale="0" />
+    <Property Name="SYMPTOM" Type="varchar2" MaxLength="500" />
+    <Property Name="ATTACHMENTS" Type="varchar2" MaxLength="500" />
+    <Property Name="TREATMENT" Type="varchar2" MaxLength="500" />
+    <Property Name="RESULT" Type="varchar2" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="HR_SCORE">
+    <Key>
+      <PropertyRef Name="SCOREID" />
+    </Key>
+    <Property Name="SCOREID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="PERSONID" Type="char" MaxLength="10" />
+    <Property Name="TABLETYPE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="TEMPLATETITLE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="TOTALSCORE" Type="number" Precision="38" Scale="0" />
+    <Property Name="GRADE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="DESCRIPTION" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="CREATETIME" Type="date" />
+    <Property Name="USERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="TEMPLATEID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="TEMPLATEDESCRIPTION" Type="nvarchar2" MaxLength="200" />
+    <Property Name="TEMPLATELABEL" Type="nvarchar2" MaxLength="200" />
+    <Property Name="SHOWGRADE" Type="number" Precision="38" Scale="0" />
+    <Property Name="ISSHOWRESULT" Type="number" Precision="38" Scale="0" />
+    <Property Name="QUESTIONSJSON" Type="nclob" />
+    <Property Name="ANSWERSJSON" Type="nclob" />
+  </EntityType>
+  <EntityType Name="HR_SCORETEMPLATE">
+    <Key>
+      <PropertyRef Name="TEMPLATEID" />
+    </Key>
+    <Property Name="TEMPLATEID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="TEMPLATETITLE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="TEMPLATEDESCRIPTION" Type="nvarchar2" MaxLength="200" />
+    <Property Name="TEMPLATELABEL" Type="nvarchar2" MaxLength="200" />
+    <Property Name="SHOWGRADE" Type="number" Precision="38" Scale="0" />
+    <Property Name="ISSHOWRESULT" Type="number" Precision="38" Scale="0" />
+    <Property Name="CREATETIME" Type="date" />
+    <Property Name="CREATEBY" Type="nvarchar2" MaxLength="50" />
+    <Property Name="MODIFYTIME" Type="date" />
+    <Property Name="MODIFYBY" Type="nvarchar2" MaxLength="50" />
+    <Property Name="QUESTIONSJSON" Type="nclob" />
+    <Property Name="ANSWERSJSON" Type="nclob" />
+  </EntityType>
+  <EntityType Name="HR_SEEDOCTORHISTORY">
+    <Key>
+      <PropertyRef Name="HISTORYID" />
+    </Key>
+    <Property Name="HISTORYID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="PERSONID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="DIAGNOSISTIME" Type="date" />
+    <Property Name="DIAGNOSIS" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="ICD10" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="HOSPITAL" Type="nvarchar2" MaxLength="200" />
+    <Property Name="DIAGNOSISREPORT" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="MEDICALHISATTACHMENT" Type="nvarchar2" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="HR_TREATMENTHISTORY">
+    <Key>
+      <PropertyRef Name="TREATMENTHISTORYID" />
+    </Key>
+    <Property Name="TREATMENTHISTORYID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="DISEASEHISTORYID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="TREATMENTTIME" Type="date" />
+    <Property Name="TREATMENTHOSPITAL" Type="nvarchar2" MaxLength="200" />
+    <Property Name="TREATMENTTYPE" Type="number" Precision="38" Scale="0" />
+    <Property Name="OPERATIONTYPE" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="OPERATIONRESLUT" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="RADIOTHERAPYDOSE" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="RADIOTHERAPYRESLUT" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="CHEMOTHERAPYPROJECT" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="CHEMOTHERAPYDRUG" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="CHEMOTHERAPYRESLUT" Type="nvarchar2" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="HR_USERGENE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar2" MaxLength="50" Nullable="false" />
+    <Property Name="GENEID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="ALLELE1ID" Type="nvarchar2" MaxLength="200" />
+    <Property Name="ALLELE2ID" Type="nvarchar2" MaxLength="200" />
+    <Property Name="CREATETIME" Type="date" />
+    <Property Name="CREATEBY" Type="nvarchar2" MaxLength="50" />
+    <Property Name="MODIFYTIME" Type="date" />
+    <Property Name="MODIFYBY" Type="nvarchar2" MaxLength="50" />
+    <Property Name="USERID" Type="nvarchar2" MaxLength="50" />
+    <Property Name="COPYNUMBER1" Type="number" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="COPYNUMBER2" Type="number" Precision="9" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LOGINFO">
+    <Key>
+      <PropertyRef Name="LOGID" />
+    </Key>
+    <Property Name="LOGID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="LOGTIME" Type="date" />
+    <Property Name="LOGLEVEL" Type="nvarchar2" MaxLength="50" />
+    <Property Name="TITLE" Type="nvarchar2" MaxLength="200" />
+    <Property Name="LOGEXCEPTION" Type="nvarchar2" MaxLength="2000" />
+    <Property Name="LOGGER" Type="nvarchar2" MaxLength="200" />
+    <Property Name="LOGSOURCE" Type="nvarchar2" MaxLength="1000" />
+    <Property Name="IP" Type="nvarchar2" MaxLength="100" />
+    <Property Name="MAC" Type="nvarchar2" MaxLength="100" />
+    <Property Name="HOSTNAME" Type="nvarchar2" MaxLength="100" />
+    <Property Name="LOGINNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="USERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="LOGMESSAGE" Type="nclob" />
+  </EntityType>
+  <EntityType Name="RESETPASSWORDLOG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" MaxLength="100" Nullable="false" />
+    <Property Name="INPUTTIME" Type="date" />
+    <Property Name="USERID" Type="varchar2" MaxLength="100" />
+    <Property Name="RESETTYPE" Type="number" Precision="38" Scale="0" />
+    <Property Name="STATUS" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="USERINFO">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="varchar2" MaxLength="100" Nullable="false" />
+    <Property Name="LOGINNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="LOGINPWD" Type="varchar2" MaxLength="100" />
+    <Property Name="MOBILEPHONE" Type="varchar2" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="100" />
+    <Property Name="CREATEUSERID" Type="nvarchar2" MaxLength="100" />
+    <Property Name="CREATEDATETIME" Type="date" />
+    <Property Name="EDITUSERID" Type="nvarchar2" MaxLength="100" />
+    <Property Name="EDITDATETIME" Type="date" />
+    <Property Name="OWNERID" Type="nvarchar2" MaxLength="100" />
+    <Property Name="ISDELETED" Type="number" Precision="1" Scale="0" Nullable="false" />
+    <Property Name="CREATEUSERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EDITUSERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="OWNERNAME" Type="nvarchar2" MaxLength="50" />
+    <Property Name="USERTYPE" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="CR_DRUGEFFECT" EntityType="Self.CR_DRUGEFFECT" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="CR_DRUGUSE" EntityType="Self.CR_DRUGUSE" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="CR_GENEEFFECT" EntityType="Self.CR_GENEEFFECT" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="CR_HABITS" EntityType="Self.CR_HABITS" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="DUG_CNDRUG" EntityType="Self.DUG_CNDRUG" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="GN_DRUGALLELE" EntityType="Self.GN_DRUGALLELE" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="GN_GENE" EntityType="Self.GN_GENE" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="GN_GENEALLELE" EntityType="Self.GN_GENEALLELE" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="GN_GENEALLELELOCUS" EntityType="Self.GN_GENEALLELELOCUS" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HPN_ResultDesc" EntityType="Self.HPN_ResultDesc" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HPN_SendVercodeLog" EntityType="Self.HPN_SendVercodeLog" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HPN_StandardAdvise" EntityType="Self.HPN_StandardAdvise" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HPN_Template" EntityType="Self.HPN_Template" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HPN_TemplateItem" EntityType="Self.HPN_TemplateItem" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HPN_TemplateItemOptions" EntityType="Self.HPN_TemplateItemOptions" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HPN_TemplateItemResult" EntityType="Self.HPN_TemplateItemResult" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HPN_TestResult" EntityType="Self.HPN_TestResult" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HPN_TestResultDetails" EntityType="Self.HPN_TestResultDetails" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HPN_Users" EntityType="Self.HPN_Users" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_ACTIVITYLOG" EntityType="Self.HR_ACTIVITYLOG" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_ANNUALINCOME" EntityType="Self.HR_ANNUALINCOME" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_AREA" EntityType="Self.HR_AREA" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_ATTACHMENT" EntityType="Self.HR_ATTACHMENT" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_CNR_USER" EntityType="Self.HR_CNR_USER" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_DISEASE" EntityType="Self.HR_DISEASE" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_DISEASECATEGORY" EntityType="Self.HR_DISEASECATEGORY" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_DISEASEHISTORY" EntityType="Self.HR_DISEASEHISTORY" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_EXAMINECATEGORY" EntityType="Self.HR_EXAMINECATEGORY" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_EXAMINEITEMLABDETAIL" EntityType="Self.HR_EXAMINEITEMLABDETAIL" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_EXAMINEITEMS" EntityType="Self.HR_EXAMINEITEMS" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_EXAMINERECORD" EntityType="Self.HR_EXAMINERECORD" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_EXAMINERESULT" EntityType="Self.HR_EXAMINERESULT" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_EXAMINETEMPLATES" EntityType="Self.HR_EXAMINETEMPLATES" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_FD_DISEASE" EntityType="Self.HR_FD_DISEASE" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_FD_MEMBER" EntityType="Self.HR_FD_MEMBER" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_FD_RELATION" EntityType="Self.HR_FD_RELATION" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_FILEUPLOAD" EntityType="Self.HR_FILEUPLOAD" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_IMAGEEXAMINATION" EntityType="Self.HR_IMAGEEXAMINATION" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_LABORATORYRESULT" EntityType="Self.HR_LABORATORYRESULT" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_LABORATORYTESTITEM" EntityType="Self.HR_LABORATORYTESTITEM" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_LABTESTRECORD" EntityType="Self.HR_LABTESTRECORD" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_LABTESTRESULT" EntityType="Self.HR_LABTESTRESULT" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_PERSONDRUGHISTORY" EntityType="Self.HR_PERSONDRUGHISTORY" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_PERSONHEALTHHISTORY" EntityType="Self.HR_PERSONHEALTHHISTORY" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_SCORE" EntityType="Self.HR_SCORE" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_SCORETEMPLATE" EntityType="Self.HR_SCORETEMPLATE" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_SEEDOCTORHISTORY" EntityType="Self.HR_SEEDOCTORHISTORY" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_TREATMENTHISTORY" EntityType="Self.HR_TREATMENTHISTORY" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="HR_USERGENE" EntityType="Self.HR_USERGENE" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="LOGINFO" EntityType="Self.LOGINFO" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="RESETPASSWORDLOG" EntityType="Self.RESETPASSWORDLOG" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="USERINFO" EntityType="Self.USERINFO" Schema="CANCERRECORD" store:Type="Tables" />
+    <EntitySet Name="DUG_DRUG" EntityType="Self.DUG_DRUG" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_DRUG"."Id" AS "Id", 
+"DUG_DRUG"."DrugBankId" AS "DrugBankId", 
+"DUG_DRUG"."Name" AS "Name", 
+"DUG_DRUG"."Description" AS "Description", 
+"DUG_DRUG"."CreateTime" AS "CreateTime", 
+"DUG_DRUG"."UpdateTime" AS "UpdateTime", 
+"DUG_DRUG"."DirectParent" AS "DirectParent", 
+"DUG_DRUG"."SuperClass" AS "SuperClass", 
+"DUG_DRUG"."Indication" AS "Indication", 
+"DUG_DRUG"."Pharmacodynamics" AS "Pharmacodynamics", 
+"DUG_DRUG"."MechanismOfAction" AS "MechanismOfAction", 
+"DUG_DRUG"."Toxicity" AS "Toxicity", 
+"DUG_DRUG"."Metabolism" AS "Metabolism", 
+"DUG_DRUG"."Absorption" AS "Absorption", 
+"DUG_DRUG"."ProteinBinding" AS "ProteinBinding"
+FROM "CANCERRECORD"."DUG_DRUG" "DUG_DRUG"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_DRUGINTERACTIONS" EntityType="Self.DUG_DRUGINTERACTIONS" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_DRUGINTERACTIONS"."Id" AS "Id", 
+"DUG_DRUGINTERACTIONS"."DrugBankId" AS "DrugBankId", 
+"DUG_DRUGINTERACTIONS"."LinkDrugBankId" AS "LinkDrugBankId", 
+"DUG_DRUGINTERACTIONS"."Name" AS "Name", 
+"DUG_DRUGINTERACTIONS"."Description" AS "Description"
+FROM "CANCERRECORD"."DUG_DRUGINTERACTIONS" "DUG_DRUGINTERACTIONS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_DRUGSYNONYMS" EntityType="Self.DUG_DRUGSYNONYMS" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_DRUGSYNONYMS"."Id" AS "Id", 
+"DUG_DRUGSYNONYMS"."DrugBankId" AS "DrugBankId", 
+"DUG_DRUGSYNONYMS"."Language" AS "Language", 
+"DUG_DRUGSYNONYMS"."Coder" AS "Coder", 
+"DUG_DRUGSYNONYMS"."Synonym" AS "Synonym"
+FROM "CANCERRECORD"."DUG_DRUGSYNONYMS" "DUG_DRUGSYNONYMS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_ENZYMEPO" EntityType="Self.DUG_ENZYMEPO" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_ENZYMEPO"."Id" AS "Id", 
+"DUG_ENZYMEPO"."ItemId" AS "ItemId", 
+"DUG_ENZYMEPO"."EnzymeId" AS "EnzymeId", 
+"DUG_ENZYMEPO"."PolypeptideId" AS "PolypeptideId", 
+"DUG_ENZYMEPO"."GeneName" AS "GeneName", 
+"DUG_ENZYMEPO"."AminoAcidSequence" AS "AminoAcidSequence", 
+"DUG_ENZYMEPO"."GeneSequence" AS "GeneSequence"
+FROM "CANCERRECORD"."DUG_ENZYMEPO" "DUG_ENZYMEPO"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_ENZYMES" EntityType="Self.DUG_ENZYMES" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_ENZYMES"."Id" AS "Id", 
+"DUG_ENZYMES"."DrugBankId" AS "DrugBankId", 
+"DUG_ENZYMES"."EnzymesId" AS "EnzymesId", 
+"DUG_ENZYMES"."Name" AS "Name", 
+"DUG_ENZYMES"."Organism" AS "Organism"
+FROM "CANCERRECORD"."DUG_ENZYMES" "DUG_ENZYMES"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_ENZYMESACTIONS" EntityType="Self.DUG_ENZYMESACTIONS" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_ENZYMESACTIONS"."Id" AS "Id", 
+"DUG_ENZYMESACTIONS"."ItemId" AS "ItemId", 
+"DUG_ENZYMESACTIONS"."EnzymesId" AS "EnzymesId", 
+"DUG_ENZYMESACTIONS"."Actions" AS "Actions"
+FROM "CANCERRECORD"."DUG_ENZYMESACTIONS" "DUG_ENZYMESACTIONS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_ENZYMESIDENTIFIER" EntityType="Self.DUG_ENZYMESIDENTIFIER" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_ENZYMESIDENTIFIER"."Id" AS "Id", 
+"DUG_ENZYMESIDENTIFIER"."EnzymePoId" AS "EnzymePoId", 
+"DUG_ENZYMESIDENTIFIER"."PolypeptideId" AS "PolypeptideId", 
+"DUG_ENZYMESIDENTIFIER"."Resource" AS "Resource", 
+"DUG_ENZYMESIDENTIFIER"."Identifier" AS "Identifier"
+FROM "CANCERRECORD"."DUG_ENZYMESIDENTIFIER" "DUG_ENZYMESIDENTIFIER"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_ENZYMESSYNONYMS" EntityType="Self.DUG_ENZYMESSYNONYMS" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_ENZYMESSYNONYMS"."Id" AS "Id", 
+"DUG_ENZYMESSYNONYMS"."EnzymePoId" AS "EnzymePoId", 
+"DUG_ENZYMESSYNONYMS"."PolypeptideId" AS "PolypeptideId", 
+"DUG_ENZYMESSYNONYMS"."Synonyms" AS "Synonyms"
+FROM "CANCERRECORD"."DUG_ENZYMESSYNONYMS" "DUG_ENZYMESSYNONYMS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_EXTERNALIDENTIFIERS" EntityType="Self.DUG_EXTERNALIDENTIFIERS" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_EXTERNALIDENTIFIERS"."Id" AS "Id", 
+"DUG_EXTERNALIDENTIFIERS"."DrugBankId" AS "DrugBankId", 
+"DUG_EXTERNALIDENTIFIERS"."Resource" AS "Resource", 
+"DUG_EXTERNALIDENTIFIERS"."Identifier" AS "Identifier"
+FROM "CANCERRECORD"."DUG_EXTERNALIDENTIFIERS" "DUG_EXTERNALIDENTIFIERS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_PRODUCTS" EntityType="Self.DUG_PRODUCTS" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_PRODUCTS"."Id" AS "Id", 
+"DUG_PRODUCTS"."DrugBankId" AS "DrugBankId", 
+"DUG_PRODUCTS"."NdcId" AS "NdcId", 
+"DUG_PRODUCTS"."Name" AS "Name", 
+"DUG_PRODUCTS"."Strength" AS "Strength", 
+"DUG_PRODUCTS"."StartedMarketingOn" AS "StartedMarketingOn"
+FROM "CANCERRECORD"."DUG_PRODUCTS" "DUG_PRODUCTS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_TARGETACTIONS" EntityType="Self.DUG_TARGETACTIONS" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_TARGETACTIONS"."Id" AS "Id", 
+"DUG_TARGETACTIONS"."ItemId" AS "ItemId", 
+"DUG_TARGETACTIONS"."TargetId" AS "TargetId", 
+"DUG_TARGETACTIONS"."Action" AS "Action"
+FROM "CANCERRECORD"."DUG_TARGETACTIONS" "DUG_TARGETACTIONS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_TARGETIDENTIFIER" EntityType="Self.DUG_TARGETIDENTIFIER" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_TARGETIDENTIFIER"."Id" AS "Id", 
+"DUG_TARGETIDENTIFIER"."TargetPoId" AS "TargetPoId", 
+"DUG_TARGETIDENTIFIER"."PolypeptideId" AS "PolypeptideId", 
+"DUG_TARGETIDENTIFIER"."Resource" AS "Resource", 
+"DUG_TARGETIDENTIFIER"."Identifier" AS "Identifier"
+FROM "CANCERRECORD"."DUG_TARGETIDENTIFIER" "DUG_TARGETIDENTIFIER"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_TARGETS" EntityType="Self.DUG_TARGETS" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_TARGETS"."Id" AS "Id", 
+"DUG_TARGETS"."DrugBankId" AS "DrugBankId", 
+"DUG_TARGETS"."TargetId" AS "TargetId", 
+"DUG_TARGETS"."Name" AS "Name", 
+"DUG_TARGETS"."Organism" AS "Organism"
+FROM "CANCERRECORD"."DUG_TARGETS" "DUG_TARGETS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_TARGETSPO" EntityType="Self.DUG_TARGETSPO" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_TARGETSPO"."Id" AS "Id", 
+"DUG_TARGETSPO"."ItemId" AS "ItemId", 
+"DUG_TARGETSPO"."TargetId" AS "TargetId", 
+"DUG_TARGETSPO"."PolypeptideId" AS "PolypeptideId", 
+"DUG_TARGETSPO"."GeneName" AS "GeneName", 
+"DUG_TARGETSPO"."AminoAcidSequence" AS "AminoAcidSequence", 
+"DUG_TARGETSPO"."GeneSequence" AS "GeneSequence"
+FROM "CANCERRECORD"."DUG_TARGETSPO" "DUG_TARGETSPO"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_TRANSPORTERACTIONS" EntityType="Self.DUG_TRANSPORTERACTIONS" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_TRANSPORTERACTIONS"."Id" AS "Id", 
+"DUG_TRANSPORTERACTIONS"."ItemId" AS "ItemId", 
+"DUG_TRANSPORTERACTIONS"."TransportersId" AS "TransportersId", 
+"DUG_TRANSPORTERACTIONS"."Action" AS "Action"
+FROM "CANCERRECORD"."DUG_TRANSPORTERACTIONS" "DUG_TRANSPORTERACTIONS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_TRANSPORTERIDENTIFIER" EntityType="Self.DUG_TRANSPORTERIDENTIFIER" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_TRANSPORTERIDENTIFIER"."Id" AS "Id", 
+"DUG_TRANSPORTERIDENTIFIER"."TransporterPoId" AS "TransporterPoId", 
+"DUG_TRANSPORTERIDENTIFIER"."PolypeptideId" AS "PolypeptideId", 
+"DUG_TRANSPORTERIDENTIFIER"."Resource" AS "Resource", 
+"DUG_TRANSPORTERIDENTIFIER"."Identifier" AS "Identifier"
+FROM "CANCERRECORD"."DUG_TRANSPORTERIDENTIFIER" "DUG_TRANSPORTERIDENTIFIER"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_TRANSPORTERS" EntityType="Self.DUG_TRANSPORTERS" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_TRANSPORTERS"."Id" AS "Id", 
+"DUG_TRANSPORTERS"."DrugBankId" AS "DrugBankId", 
+"DUG_TRANSPORTERS"."TransportersId" AS "TransportersId", 
+"DUG_TRANSPORTERS"."Name" AS "Name", 
+"DUG_TRANSPORTERS"."Organism" AS "Organism"
+FROM "CANCERRECORD"."DUG_TRANSPORTERS" "DUG_TRANSPORTERS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DUG_TRANSPORTERSPO" EntityType="Self.DUG_TRANSPORTERSPO" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"DUG_TRANSPORTERSPO"."Id" AS "Id", 
+"DUG_TRANSPORTERSPO"."ItemId" AS "ItemId", 
+"DUG_TRANSPORTERSPO"."TransportersId" AS "TransportersId", 
+"DUG_TRANSPORTERSPO"."PolypeptideId" AS "PolypeptideId", 
+"DUG_TRANSPORTERSPO"."GeneName" AS "GeneName", 
+"DUG_TRANSPORTERSPO"."AminoAcidSequence" AS "AminoAcidSequence", 
+"DUG_TRANSPORTERSPO"."GeneSequence" AS "GeneSequence"
+FROM "CANCERRECORD"."DUG_TRANSPORTERSPO" "DUG_TRANSPORTERSPO"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="HR_LABTESTITEM" EntityType="Self.HR_LABTESTITEM" store:Type="Tables" store:Schema="CANCERRECORD">
+      <DefiningQuery>SELECT 
+"HR_LABTESTITEM"."TESTITEMID" AS "TESTITEMID", 
+"HR_LABTESTITEM"."TESTITEMNO" AS "TESTITEMNO", 
+"HR_LABTESTITEM"."ITEMNAME" AS "ITEMNAME", 
+"HR_LABTESTITEM"."UNIT" AS "UNIT", 
+"HR_LABTESTITEM"."NORMALVALUE" AS "NORMALVALUE", 
+"HR_LABTESTITEM"."VALUETYPE" AS "VALUETYPE", 
+"HR_LABTESTITEM"."LOINCCODE" AS "LOINCCODE", 
+"HR_LABTESTITEM"."CREATEDATE" AS "CREATEDATE", 
+"HR_LABTESTITEM"."CREATEBY" AS "CREATEBY", 
+"HR_LABTESTITEM"."UPDATEDATE" AS "UPDATEDATE", 
+"HR_LABTESTITEM"."UPDATEBY" AS "UPDATEBY", 
+"HR_LABTESTITEM"."STATUS" AS "STATUS"
+FROM "CANCERRECORD"."HR_LABTESTITEM" "HR_LABTESTITEM"</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
